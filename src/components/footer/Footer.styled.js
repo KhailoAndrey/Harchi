@@ -8,9 +8,9 @@ export const Container = styled.div`
   width: 100vw;
   padding: 30px 80px;
   background-color: #1E261E;
-  position: fixed;
+  /* position: fixed;
   bottom: 0;
-  z-index: 50;
+  z-index: 50; */
 
 
   @media screen and (min-width: 768px) {

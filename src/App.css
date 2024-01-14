@@ -17,7 +17,7 @@
 body {
   /* font-family: ''; */
   background-color: white;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   color: black;
 }
 
@@ -49,10 +49,3 @@ button {
   cursor: pointer;
 }
 
-.no_scroll {
-  overflow: hidden;
-}
-
-.hidden {
-  display: none;
-}

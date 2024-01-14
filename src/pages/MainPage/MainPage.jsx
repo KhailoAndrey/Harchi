@@ -1,9 +1,24 @@
+import { Wrapper } from "./MainPage.styled";
 
 function MainPage() {
     return (
-        <div>
-            <h1>Main Page</h1>
-        </div>
+      <Wrapper >
+        <h1>Main Page1</h1>
+        <h1>Main Page</h1>
+        <h1>Main Page</h1>
+        <h1>Main Page</h1>
+        <h1>Main Page</h1>
+        <h1>Main Page</h1>
+        <h1>Main Page</h1>
+        <h1>Main Page</h1>
+        <h1>Main Page</h1>
+        <h1>Main Page</h1>
+        <h1>Main Page</h1>
+        <h1>Main Page</h1>
+        <h1>Main Page</h1>
+        <h1>Main Page</h1>
+        <h1>Main Page123123</h1>
+      </Wrapper>
     );
 }
 
