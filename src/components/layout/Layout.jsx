@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
-import Loader from './loader/Loader';
 import { Outlet } from 'react-router-dom';
+import Loader from './loader/Loader';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
 

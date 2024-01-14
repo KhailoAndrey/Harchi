@@ -1,5 +1,5 @@
-import Logo from '../logo/Logo';
 import { Container } from './Footer.styled';
+import Logo from '../logo/Logo';
 
 function Footer() {
   return (
