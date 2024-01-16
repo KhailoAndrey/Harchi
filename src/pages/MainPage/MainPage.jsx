@@ -1,25 +1,12 @@
-import { Wrapper } from "./MainPage.styled";
+import Hero from '../../components/hero/Hero';
+import { Wrapper } from './MainPage.styled';
 
 function MainPage() {
-    return (
-      <Wrapper >
-        <h1>Main Page1</h1>
-        <h1>Main Page</h1>
-        <h1>Main Page</h1>
-        <h1>Main Page</h1>
-        <h1>Main Page</h1>
-        <h1>Main Page</h1>
-        <h1>Main Page</h1>
-        <h1>Main Page</h1>
-        <h1>Main Page</h1>
-        <h1>Main Page</h1>
-        <h1>Main Page</h1>
-        <h1>Main Page</h1>
-        <h1>Main Page</h1>
-        <h1>Main Page</h1>
-        <h1>Main Page123123</h1>
-      </Wrapper>
-    );
+  return (
+    <Wrapper>
+      <Hero />
+    </Wrapper>
+  );
 }
 
 export default MainPage;

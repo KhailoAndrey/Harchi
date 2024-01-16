@@ -1,0 +1,17 @@
+  [
+    {
+    "id": 0,
+    "photo": "../../assets/heroSwiper/slide1.png",
+    "alt": "chef preparing salad"
+  },
+  {
+    "id": 1,
+    "photo": "../../assets/heroSwiper/slide2.png",
+    "alt": "chef cutting onions"
+  },
+  {
+    "id": 2,
+    "photo": "../../assets/heroSwiper/slide3.png",
+    "alt": "chef cooking on a frying pan"
+  }
+]

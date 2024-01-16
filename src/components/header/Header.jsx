@@ -1,11 +1,13 @@
-import { Container } from './Header.styled';
+import { Container, Wrapper } from './Header.styled';
 import Logo from '../logo/Logo';
 
 function Header() {
   return (
-    <Container>
-      <Logo />
-    </Container>
+    <Wrapper>
+      <Container>
+        <Logo />
+      </Container>
+    </Wrapper>
   );
 }
 

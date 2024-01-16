@@ -1,17 +1,24 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 48px;
-  height: 98px;
-  width: 100vw;
-  padding: 16px 80px;
-  background-color: #F5F1EC;
-  position: fixed;
-  top: 0;
-  z-index: 50;
+export const Wrapper = styled.div`
+width: 100vw;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 98px;
+background-color: #F5F1EC;
+position: fixed;
+top: 0;
+z-index: 50;
 
+`
+
+export const Container = styled.div`
+  gap: 48px;
+  width: 1440px;
+  height: 100%;
+  padding: 16px 80px;
+  
 
   @media screen and (min-width: 768px) {
     /* height: 68px;
