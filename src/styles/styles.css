@@ -9,7 +9,7 @@
 
 body {
   /* font-family: ''; */
-background-color: #F5F1EC;
+  background-color: #f5f1ec;
   /* overflow-x: hidden; */
   color: black;
 }
@@ -41,4 +41,3 @@ p {
 button {
   cursor: pointer;
 }
-

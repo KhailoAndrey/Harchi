@@ -1,36 +1,46 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const Wrapper = styled.div`
-width: 100%;
-height: 675px;
-display: flex;
-margin-bottom: 100px;
-`
 export const Container = styled.div`
-display: flex;
-flex-direction: column;
-width: 732px;
-height: 675px;
-padding: 196px 24px 196px 80px;
-gap: 48px;
-flex-shrink: 0;
-background: #527853;
-    
-`
+  width: ${props => props.width};
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+  border-radius: 8px;
+  overflow: hidden;
+`;
+export const InfoBlock = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  width: ${props => props.size.w};
+  height: ${props => props.size.h};
+  padding-left: ${props => props.pl};
+  gap: ${props => props.gap};
+  background: ${props => props.bgc};
+`;
 
 export const Info = styled.div`
-font-family: KyivType Sans;
-font-size: 36px;
-font-style: normal;
-font-weight: 700;
-line-height: 130%;
+  width: 628px;
+  font-family: KyivType Sans;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  color: #f5f1ec;
+`;
+export const InfoText = styled.span`
+  font-family: El Messiri;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  color: #f5f1ec;
+`;
 
-color: #F5F1EC;
-`
 export const Slider = styled.div`
-width: 708px;
-height: 675px;
-padding: 0;
-background-size: cover;
-background: #9C2B3F;
-`
+  width: ${props => props.size.w};
+  height: ${props => props.size.h};
+  padding: 0;
+  background-size: cover;
+`;
