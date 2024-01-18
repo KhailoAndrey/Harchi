@@ -1,17 +1,19 @@
 import SwiperCore from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Scrollbar } from 'swiper/modules';
+import { Autoplay, EffectFade, Scrollbar } from 'swiper/modules';
 import PropTypes from 'prop-types';
 
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/scrollbar';
+import 'swiper/css/effect-fade';
+
 import SwiperSlideImg from '../../helpers/swiperSlides/swiperItem';
 import slides from '../../helpers/swiperSlides/slides.json';
 import { SwiperScrollBar } from './SwiperHero.styled';
 
-SwiperCore.use([Autoplay, Scrollbar]);
+SwiperCore.use([Autoplay, Scrollbar, EffectFade]);
 
 function SwiperHero({ sliceStartIndex }) {
   const carouselSettings = {
@@ -21,7 +23,7 @@ function SwiperHero({ sliceStartIndex }) {
     speed: 2000,
     effect: 'fade',
     fadeEffect: {
-      crossFade: false,
+      crossFade: true,
     },
     autoplay: {
       delay: 2000,
