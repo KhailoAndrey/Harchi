@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "photo": "../../assets/heroSwiper/slide1.png",
+    "photo": "/src/assets/heroSwiper/slide1.png",
     "alt": "chef preparing salad"
   },
   {
