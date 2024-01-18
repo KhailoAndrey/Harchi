@@ -1,6 +1,7 @@
 {
   "name": "harchi",
   "private": true,
+  "homepage": "https://KhailoAndrey/Harchi/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
