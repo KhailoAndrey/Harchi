@@ -15,7 +15,7 @@ import { SwiperScrollBar } from './SwiperHero.styled';
 
 SwiperCore.use([Autoplay, Scrollbar, EffectFade]);
 
-function SwiperHero({ sliceStartIndex }) {
+function SwiperHero({ sliceStartIndex, width }) {
   const carouselSettings = {
     spaceBetween: 0,
     slidesPerView: 1,
@@ -35,11 +35,9 @@ function SwiperHero({ sliceStartIndex }) {
     scrollbar: {
       dragClass: 'swiper-scrollbar-drag',
       draggable: true,
-      //   dragSize: '300px',
+      dragSize: '68',
       el: '.swiper-scrollbar',
       hide: false,
-      horizontalClass: 'swiper-scrollbar-horizontal',
-      //   snapOnRelease: true,
     },
   };
 
@@ -53,7 +51,10 @@ function SwiperHero({ sliceStartIndex }) {
   return (
     <Swiper {...carouselSettings}>
       {swiperSlides}
-      <SwiperScrollBar className="swiper-scrollbar swiper-scrollbar-horizontal swiper-scrollbar-drag" />
+      <SwiperScrollBar
+        className="swiper-scrollbar swiper-scrollbar-horizontal swiper-scrollbar-drag"
+        ml={width}
+      />
     </Swiper>
   );
 }
@@ -62,4 +63,5 @@ export default SwiperHero;
 
 SwiperHero.propTypes = {
   sliceStartIndex: PropTypes.number.isRequired,
+  width: PropTypes.number.isRequired,
 };

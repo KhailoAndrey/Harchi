@@ -23,12 +23,12 @@ function Hero() {
           ></RedirectButton>
         </InfoBlock>
         <Slider size={{ w: '708px', h: '675px' }}>
-          <SwiperHero sliceStartIndex={0} />
+          <SwiperHero sliceStartIndex={0} width={708} />
         </Slider>
       </Container>
       <Container width={'1280px'}>
         <Slider size={{ w: '628px', h: '472px' }}>
-          <SwiperHero sliceStartIndex={3} />
+          <SwiperHero sliceStartIndex={3} width={628} />
         </Slider>
         <InfoBlock
           size={{ w: '652px', h: '472px' }}
