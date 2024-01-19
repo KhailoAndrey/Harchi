@@ -11,5 +11,5 @@ export default defineConfig({
       enforce: 'pre',
     },
   ],
-  base: '/Harchi/',
+  base: 'Harchi',
 });
