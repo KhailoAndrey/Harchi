@@ -9,7 +9,6 @@ import 'swiper/css/autoplay';
 import 'swiper/css/scrollbar';
 import 'swiper/css/effect-fade';
 
-// import SwiperSlideImg from '../../helpers/swiperSlides/swiperItem';
 import slides from '../../helpers/swiperSlides/slides.json';
 import { SwiperScrollBar } from './SwiperHero.styled';
 
@@ -68,6 +67,6 @@ export default SwiperHero;
 SwiperHero.propTypes = {
   sliceStartIndex: PropTypes.number.isRequired,
   width: PropTypes.number.isRequired,
-  photo: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
+  photo: PropTypes.string,
+  alt: PropTypes.string,
 };
