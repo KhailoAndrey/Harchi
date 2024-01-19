@@ -9,7 +9,7 @@ import 'swiper/css/autoplay';
 import 'swiper/css/scrollbar';
 import 'swiper/css/effect-fade';
 
-import SwiperSlideImg from '../../helpers/swiperSlides/swiperItem';
+// import SwiperSlideImg from '../../helpers/swiperSlides/swiperItem';
 import slides from '../../helpers/swiperSlides/slides.json';
 import { SwiperScrollBar } from './SwiperHero.styled';
 
@@ -41,6 +41,10 @@ function SwiperHero({ sliceStartIndex, width }) {
     },
   };
 
+  const SwiperSlideImg = ({ photo, alt }) => {
+    return <img src={`/Harchi/public/heroSwiper/${photo}`} alt={alt} />;
+  };
+
   const swiperSlides = slides
     .slice(sliceStartIndex, sliceStartIndex + 3)
     .map(({ id, photo, alt }) => (
@@ -64,4 +68,6 @@ export default SwiperHero;
 SwiperHero.propTypes = {
   sliceStartIndex: PropTypes.number.isRequired,
   width: PropTypes.number.isRequired,
+  photo: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
 };
