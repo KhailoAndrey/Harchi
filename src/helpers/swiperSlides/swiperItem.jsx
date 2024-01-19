@@ -5,7 +5,8 @@ const SwiperSlideImg = ({ photo, alt }) => {
   const [slide, setSlide] = useState(null);
 
   useEffect(() => {
-    import(photo)
+    import.meta.env
+      .import(photo)
       .then(image => {
         setSlide(image.default);
       })
