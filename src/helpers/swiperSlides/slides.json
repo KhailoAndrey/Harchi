@@ -1,32 +1,32 @@
 [
   {
     "id": 0,
-    "photo": "../../assets/heroSwiper/slide1.png",
+    "photo": "/public/heroSwiper/slide1.png",
     "alt": "chef preparing salad"
   },
   {
     "id": 1,
-    "photo": "../../assets/heroSwiper/slide2.png",
+    "photo": "/public/heroSwiper/slide2.png",
     "alt": "chef cutting onions"
   },
   {
     "id": 2,
-    "photo": "../../assets/heroSwiper/slide3.png",
+    "photo": "/public/heroSwiper/slide3.png",
     "alt": "chef cooking on a frying pan"
   },
   {
     "id": 3,
-    "photo": "../../assets/heroSwiper/slide4.png",
+    "photo": "/public/heroSwiper/slide4.png",
     "alt": "child frying vegetables"
   },
   {
     "id": 4,
-    "photo": "../../assets/heroSwiper/slide5.png",
+    "photo": "/public/heroSwiper/slide5.png",
     "alt": "daughter helps mom bake cookies"
   },
   {
     "id": 5,
-    "photo": "../../assets/heroSwiper/slide6.png",
+    "photo": "/public/heroSwiper/slide6.png",
     "alt": "woman preparing baguette bruschettas"
   }
 ]
