@@ -40,15 +40,11 @@ function SwiperHero({ sliceStartIndex, width }) {
     },
   };
 
-  const SwiperSlideImg = ({ photo, alt }) => {
-    return <img src={`./heroSwiper/${photo}`} alt={alt} />;
-  };
-
   const swiperSlides = slides
     .slice(sliceStartIndex, sliceStartIndex + 3)
     .map(({ id, photo, alt }) => (
       <SwiperSlide key={id}>
-        <SwiperSlideImg photo={photo} alt={alt} />
+        <img src={`./heroSwiper/${photo}`} alt={alt} />
       </SwiperSlide>
     ));
   return (
@@ -67,6 +63,4 @@ export default SwiperHero;
 SwiperHero.propTypes = {
   sliceStartIndex: PropTypes.number.isRequired,
   width: PropTypes.number.isRequired,
-  photo: PropTypes.string,
-  alt: PropTypes.string,
 };
