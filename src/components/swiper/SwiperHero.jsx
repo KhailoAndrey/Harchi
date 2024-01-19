@@ -42,7 +42,7 @@ function SwiperHero({ sliceStartIndex, width }) {
   };
 
   const SwiperSlideImg = ({ photo, alt }) => {
-    return <img src={`/Harchi/public/heroSwiper/${photo}`} alt={alt} />;
+    return <img src={`/public/heroSwiper/${photo}`} alt={alt} />;
   };
 
   const swiperSlides = slides
