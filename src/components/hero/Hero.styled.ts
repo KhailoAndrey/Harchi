@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.div<{ width: string }>`
   width: ${props => props.width};
   display: flex;
   justify-content: center;
@@ -8,7 +8,12 @@ export const Container = styled.div`
   border-radius: 8px;
   overflow: hidden;
 `;
-export const InfoBlock = styled.div`
+export const InfoBlock = styled.div<{
+  size: { w: string; h: string };
+  pl: string;
+  gap: string;
+  bgc: string;
+}>`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,7 +43,7 @@ export const InfoText = styled.span`
   color: #f5f1ec;
 `;
 
-export const Slider = styled.div`
+export const Slider = styled.div<{ size: { w: string; h: string } }>`
   width: ${props => props.size.w};
   height: ${props => props.size.h};
   padding: 0;

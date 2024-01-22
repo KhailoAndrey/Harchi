@@ -2,7 +2,6 @@ import SwiperCore from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade, Scrollbar } from 'swiper/modules';
-import PropTypes from 'prop-types';
 
 import 'swiper/css';
 import 'swiper/css/autoplay';
@@ -14,7 +13,11 @@ import { SwiperScrollBar } from './SwiperHero.styled';
 
 SwiperCore.use([Autoplay, Scrollbar, EffectFade]);
 
-function SwiperHero({ sliceStartIndex, width }) {
+interface ISwiperHero {
+  sliceStartIndex: number;
+  width: number;
+}
+function SwiperHero({ sliceStartIndex, width }: ISwiperHero) {
   const carouselSettings = {
     spaceBetween: 0,
     slidesPerView: 1,
@@ -34,7 +37,7 @@ function SwiperHero({ sliceStartIndex, width }) {
     scrollbar: {
       dragClass: 'swiper-scrollbar-drag',
       draggable: true,
-      dragSize: '68',
+      dragSize: 68,
       el: '.swiper-scrollbar',
       hide: false,
     },
@@ -59,8 +62,3 @@ function SwiperHero({ sliceStartIndex, width }) {
 }
 
 export default SwiperHero;
-
-SwiperHero.propTypes = {
-  sliceStartIndex: PropTypes.number.isRequired,
-  width: PropTypes.number.isRequired,
-};
