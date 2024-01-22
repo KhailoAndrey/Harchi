@@ -10,11 +10,11 @@ import 'swiper/css/scrollbar';
 import 'swiper/css/effect-fade';
 
 import slides from '../../helpers/swiperSlides/slides.json';
-import { SwiperScrollBar } from './SwiperHero.styled';
+import { SwiperScrollBar } from './SwiperBlock.styled';
 
 SwiperCore.use([Autoplay, Scrollbar, EffectFade]);
 
-function SwiperHero({ sliceStartIndex, width }) {
+function SwiperBlock({ sliceStartIndex, width }) {
   const carouselSettings = {
     spaceBetween: 0,
     slidesPerView: 1,
@@ -52,15 +52,15 @@ function SwiperHero({ sliceStartIndex, width }) {
       {swiperSlides}
       <SwiperScrollBar
         className="swiper-scrollbar swiper-scrollbar-horizontal swiper-scrollbar-drag"
-        ml={width}
+        $ml={width}
       />
     </Swiper>
   );
 }
 
-export default SwiperHero;
+export default SwiperBlock;
 
-SwiperHero.propTypes = {
+SwiperBlock.propTypes = {
   sliceStartIndex: PropTypes.number.isRequired,
   width: PropTypes.number.isRequired,
 };
