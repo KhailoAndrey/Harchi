@@ -14,7 +14,11 @@ import { SwiperScrollBar } from './SwiperBlock.styled';
 
 SwiperCore.use([Autoplay, Scrollbar, EffectFade]);
 
-function SwiperBlock({ sliceStartIndex, width }) {
+interface ISwiperBlock {
+  sliceStartIndex: number;
+  width: number;
+}
+function SwiperBlock({ sliceStartIndex, width }: ISwiperBlock) {
   const carouselSettings = {
     spaceBetween: 0,
     slidesPerView: 1,
@@ -34,7 +38,7 @@ function SwiperBlock({ sliceStartIndex, width }) {
     scrollbar: {
       dragClass: 'swiper-scrollbar-drag',
       draggable: true,
-      dragSize: '68',
+      dragSize: 68,
       el: '.swiper-scrollbar',
       hide: false,
     },

@@ -2,7 +2,7 @@ import InfoContainer from '../infoContainer/InfoContainer';
 import {
   InitialPropsHero,
   InitialPropsWelcome,
-} from '../../helpers/swiperSlides/initialSwiperMainPage.js';
+} from '../../helpers/swiperSlides/initialSwiperMainPage';
 
 function Hero() {
   return (

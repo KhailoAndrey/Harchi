@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-export const SwiperScrollBar = styled.div`
+export const SwiperScrollBar = styled.div<{ $ml: number }>`
   width: 204px !important;
-position: absolute;
-margin-left: ${props => (props.$ml / 2 - 102)}px !important;
-margin-bottom: 12px !important;
+  position: absolute;
+  margin-left: ${props => props.$ml / 2 - 102}px !important;
+  margin-bottom: 12px !important;
   opacity: 0.5;
   transition: opacity 0.3s ease;
   /* background-color: #ff0000 !important; */
