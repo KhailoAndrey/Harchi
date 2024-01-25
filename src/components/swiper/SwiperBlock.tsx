@@ -15,10 +15,11 @@ import { SwiperScrollBar } from './SwiperBlock.styled';
 SwiperCore.use([Autoplay, Scrollbar, EffectFade]);
 
 interface ISwiperBlock {
+  loop: boolean;
   sliceStartIndex: number;
   width: number;
 }
-function SwiperBlock({ sliceStartIndex, width }: ISwiperBlock) {
+function SwiperBlock({ loop, sliceStartIndex, width }: ISwiperBlock) {
   const carouselSettings = {
     spaceBetween: 0,
     slidesPerView: 1,
@@ -33,7 +34,7 @@ function SwiperBlock({ sliceStartIndex, width }: ISwiperBlock) {
       disableOnInteraction: false,
       pauseOnMouseEnter: true,
     },
-    loop: true,
+    loop: loop,
     loopAddBlankSlides: true,
     scrollbar: {
       dragClass: 'swiper-scrollbar-drag',

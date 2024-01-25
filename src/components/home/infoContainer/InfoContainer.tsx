@@ -6,8 +6,8 @@ import {
   InfoText,
   Slider,
 } from './InfoContainer.styled';
-import RedirectButton from '../../helpers/buttons/RedirectButton';
-import SwiperBlock from '../swiper/SwiperBlock';
+import RedirectButton from '../../../helpers/buttons/RedirectButton';
+import SwiperBlock from '../../swiper/SwiperBlock';
 
 function InfoContainer({ InitialProps }) {
   return (
@@ -16,6 +16,7 @@ function InfoContainer({ InitialProps }) {
         {InitialProps.swiperflag === 'left' && (
           <Slider size={InitialProps.slider.size}>
             <SwiperBlock
+              loop={InitialProps.swiperblock.loop}
               sliceStartIndex={InitialProps.swiperblock.slicestartindex}
               width={InitialProps.swiperblock.width}
             />
@@ -42,6 +43,7 @@ function InfoContainer({ InitialProps }) {
         {InitialProps.swiperflag === 'right' && (
           <Slider size={InitialProps.slider.size}>
             <SwiperBlock
+              loop={InitialProps.swiperblock.loop}
               sliceStartIndex={InitialProps.swiperblock.slicestartindex}
               width={InitialProps.swiperblock.width}
             />
@@ -80,6 +82,7 @@ InfoContainer.propTypes = {
       }).isRequired,
     }).isRequired,
     swiperblock: PropTypes.shape({
+      loop: PropTypes.bool.isRequired,
       slicestartindex: PropTypes.number.isRequired,
       width: PropTypes.number.isRequired,
     }).isRequired,

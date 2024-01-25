@@ -28,5 +28,10 @@
     "id": 5,
     "photo": "slide6.png",
     "alt": "woman preparing baguette bruschettas"
+  },
+  {
+    "id": 6,
+    "photo": "slide7.png",
+    "alt": "pancakes with berries"
   }
 ]

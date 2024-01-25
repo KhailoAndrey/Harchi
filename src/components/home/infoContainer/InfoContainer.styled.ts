@@ -19,6 +19,7 @@ export const InfoBlock = styled.div<{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
   flex-shrink: 0;
   width: ${props => props.size.w};
   height: ${props => props.size.h};
@@ -34,7 +35,7 @@ export const Info = styled.div`
   font-style: normal;
   font-weight: 700;
   line-height: 130%;
-  color: #f5f1ec;
+  color: #fbf8f6;
 `;
 export const InfoText = styled.span`
   font-family: El Messiri;
@@ -42,7 +43,7 @@ export const InfoText = styled.span`
   font-style: normal;
   font-weight: 400;
   line-height: 130%;
-  color: #f5f1ec;
+  color: #fbf8f6;
 `;
 
 export const Slider = styled.div<{ size: { w: string; h: string } }>`
