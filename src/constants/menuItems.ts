@@ -14,7 +14,7 @@ export const menuItems = [
     color: palette.red,
   },
   {
-    id: 1,
+    id: 3,
     label: 'Моя кулінарна книга',
     path: ROUTES.BOOK,
   },
