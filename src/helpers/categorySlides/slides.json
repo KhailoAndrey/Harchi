@@ -1,0 +1,50 @@
+[
+  {
+    "id": 0,
+    "photo": "slide1.png",
+    "alt": "meat dishes",
+    "title": "Страви з мʼяса"
+  },
+  {
+    "id": 1,
+    "photo": "slide2.png",
+    "alt": "salads",
+    "title": "Салати"
+  },
+  {
+    "id": 2,
+    "photo": "slide3.png",
+    "alt": "snacks",
+    "title": "Закуски"
+  },
+  {
+    "id": 3,
+    "photo": "slide4.png",
+    "alt": "dessert",
+    "title": "Десерти"
+  },
+  {
+    "id": 4,
+    "photo": "slide5.png",
+    "alt": "breakfasts",
+    "title": "Сніданки"
+  },
+  {
+    "id": 5,
+    "photo": "slide6.png",
+    "alt": "first meal",
+    "title": "Перші страви"
+  },
+  {
+    "id": 6,
+    "photo": "slide7.png",
+    "alt": "main courses",
+    "title": "Другі страви"
+  },
+  {
+    "id": 7,
+    "photo": "slide8.png",
+    "alt": "fish dishes",
+    "title": "Страви з риби"
+  }
+]
