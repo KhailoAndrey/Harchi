@@ -10,12 +10,22 @@ import 'swiper/css/effect-fade';
 
 import slides from '../../../helpers/categorySlides/slides.json';
 
-import { Container, Slider, Title } from './CategoryRecipes.styled';
+import {
+  Container,
+  Image,
+  Overlay,
+  SlideContainer,
+  Slider,
+  Text,
+  Title,
+} from './CategoryRecipes.styled';
+import { SwiperOptions } from 'swiper/types';
+import { title } from 'process';
 
 SwiperCore.use([Autoplay, EffectFade, Pagination, Grid]);
 
 export default function CategoryRecipes() {
-  const carouselSettings = {
+  const carouselSettings: SwiperOptions = {
     spaceBetween: 24,
     slidesPerView: 4,
     initialSlide: 0,
@@ -36,13 +46,21 @@ export default function CategoryRecipes() {
       rows: 2,
     },
     pagination: {
+      type: 'bullets',
       clickable: true,
+      dynamicBullets: true,
+      dynamicMainBullets: 3,
     },
   };
 
-  const swiperSlides = slides.map(({ id, photo, alt }) => (
+  const swiperSlides = slides.map(({ id, photo, alt, title }) => (
     <SwiperSlide key={id}>
-      <img src={`./categorySwaiper/${photo}`} alt={alt} />
+      <SlideContainer>
+        <Image src={`./categorySwaiper/${photo}`} alt={alt} />
+        <Overlay>
+          <Text>{title}</Text>
+        </Overlay>
+      </SlideContainer>
     </SwiperSlide>
   ));
 
