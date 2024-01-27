@@ -10,7 +10,7 @@ export const Container = styled.div`
   /* overflow: hidden; */
 `;
 
-export const Title = styled.span`
+export const Title = styled.h2`
   color: #111110;
   font-family: 'KyivType Sans';
   font-size: 36px;

@@ -20,7 +20,7 @@ import {
   Title,
 } from './CategoryRecipes.styled';
 import { SwiperOptions } from 'swiper/types';
-import { title } from 'process';
+
 
 SwiperCore.use([Autoplay, EffectFade, Pagination, Grid]);
 
