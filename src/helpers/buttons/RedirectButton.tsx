@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-// import { ReactComponent as ChevronRight } from '../../../public/heroSwiper/chevron-right.svg';
+import ChevronRight from '../../../public/heroSwiper/chevron-right.svg';
 import { ButtonStyled } from './RedirectButton.styled';
 
 const RedirectButton = ({ text, backgroundcolor, textcolor }) => {
@@ -7,7 +7,7 @@ const RedirectButton = ({ text, backgroundcolor, textcolor }) => {
     <ButtonStyled style={{ background: backgroundcolor, color: textcolor }}>
       {text}
       <svg width={28} height={28}>
-        <use href="../../../public/heroSwiper/chevron-right.svg#chevron-right"></use>
+        <use href={`${ChevronRight}#chevron-right`}></use>
       </svg>
       {/* <img src="../../../public/heroSwiper/chevron-right.svg" alt="right" /> */}
       {/* <ChevronRight /> */}

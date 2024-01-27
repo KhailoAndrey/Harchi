@@ -2,10 +2,10 @@ import styled, { keyframes } from 'styled-components';
 
 const fadeIn = keyframes`
   0%, 100% {
-    width: 194px;
+    width: 231px;
   }
   50% {
-    width: 209px;
+    width: 246px;
   }
 `;
 
@@ -28,6 +28,14 @@ export const ButtonStyled = styled.button<{
   font-weight: 700;
   line-height: 100%;
   /* max-width: fit-content; */
-  /* width: 194px; */
+  width: fit-content;
   animation: ${fadeIn} 2s infinite ease-out;
+  /* scale: 1; */
+  transform-origin: center left;
+  transition: transform 1s ease;
+
+  &:hover{
+    transform: scale(1.25);
+    transform-origin: center left;
+  }
 `;
