@@ -6,11 +6,12 @@ const RedirectButton = ({ text, backgroundcolor, textcolor }) => {
   return (
     <ButtonStyled style={{ background: backgroundcolor, color: textcolor }}>
       {text}
-      <svg width={28} height={28}>
-        <use href={`${ChevronRight}#chevron-right`}></use>
-      </svg>
-      {/* <img src="../../../public/heroSwiper/chevron-right.svg" alt="right" /> */}
-      {/* <ChevronRight /> */}
+      <img
+        src={`${ChevronRight}`}
+        alt="chevron-right"
+        width="28px"
+        height="28px"
+      />
     </ButtonStyled>
   );
 };
