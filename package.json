@@ -22,7 +22,8 @@
     "react-router-dom": "^6.21.3",
     "styled-components": "^6.1.8",
     "swiper": "^11.0.5",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "vite-plugin-svgr": "^4.2.0"
   },
   "devDependencies": {
     "@rollup/plugin-dynamic-import-vars": "^2.1.2",
