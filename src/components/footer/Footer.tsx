@@ -1,11 +1,19 @@
-import { Container } from './Footer.styled';
+import { Container, Wrapper } from './Footer.styled';
 import Logo from '../logo/Logo';
+import Links from './links/Links';
+import Subscribe from './subscribe/Subscribe';
+import Socials from './socials/Socials';
 
 function Footer() {
   return (
-    <Container>
-      <Logo />
-    </Container>
+    <Wrapper>
+      <Container>
+        <Logo />
+        <Links />
+        <Subscribe />
+        <Socials />
+      </Container>
+    </Wrapper>
   );
 }
 

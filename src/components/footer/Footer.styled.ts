@@ -1,17 +1,20 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  height: 236px;
+export const Wrapper = styled.div`
   width: 100vw;
-  padding: 30px 80px;
-  background-color: #1E261E;
-  /* position: fixed;
-  bottom: 0;
-  z-index: 50; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 236px;
+  background-color: #1e261e;
+  `;
 
+export const Container = styled.div`
+  display: flex;  
+  padding: 30px 80px;
+  width: 1440px;
+  height: 100%;
+  justify-content: space-between;
 
   @media screen and (min-width: 768px) {
     /* height: 68px;
