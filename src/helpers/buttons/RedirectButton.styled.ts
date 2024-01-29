@@ -9,12 +9,14 @@ const fadeIn = keyframes`
   }
 `;
 
-export const ButtonStyled = styled.button<{
-  backgroundcolor: string;
-  textcolor: string;
-}>`
-  background: ${props => props.backgroundcolor};
-  color: ${props => props.textcolor};
+interface ButtonStyledProps {
+  $backgroundcolor: string;
+  $textcolor: string;
+}
+
+export const ButtonStyled = styled.button<ButtonStyledProps>`
+  background: ${props => props.$backgroundcolor};
+  color: ${props => props.$textcolor};
   display: flex;
   height: 48px;
   padding: 16px 30px;

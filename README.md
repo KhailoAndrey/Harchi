@@ -1,8 +1,29 @@
-# React + Vite
+Ласкаво просимо на "Харчі" – магічний кулінарний портал, де пристрасть до
+смаколиків перетворюється на справжнє мистецтво готування. Наш віртуальний світ
+кулінарії пропонує безмежну кількість вражаючих рецептів, що відображають
+різноманіття смаків та культур.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Простота використання – ключовий принцип. Ви можете беззавадно досліджувати
+безліч рецептів, просто прокручуючи сторінку, насолоджуючись кулінарною
+різноманітністю. Якщо ви бажаєте поділитися власним кулінарним досвідом,
+авторизуйтеся, і ваші рецепти стануть частиною цього віртуального кулінарного
+світу.
 
-Currently, two official plugins are available:
+Поглиблюйтеся в атмосферу популярних страв, відкривайте таланти та кулінарну
+винахідливість інших користувачів. Слідкуйте за рецептами, які стають хітами,
+досліджуйте їх історії успіху та залишайте свої відгуки.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Welcome to "Harchi" – a magical culinary portal where the passion for food
+transforms into the art of cooking. Our virtual culinary world offers an endless
+array of impressive recipes that reflect the diversity of flavors and cultures.
+
+Ease of use is the key principle. You can effortlessly explore countless recipes
+by simply scrolling through the page, savoring the culinary variety. If you wish
+to share your culinary expertise, log in, and your recipes will become part of
+this virtual culinary encyclopedia.
+
+Immerse yourself in the atmosphere of popular dishes, discover the talents and
+culinary ingenuity of other users. Keep track of recipes that become hits,
+explore their success stories, and leave your own reviews. Welcome to the world
+of "Harchi" – where food meets creativity, and culinary magic is accessible to
+everyone.
