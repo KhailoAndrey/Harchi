@@ -12,9 +12,10 @@ export const LogoLink = styled(Link)`
   background-repeat: no-repeat;
   /* background-size: 20px 20px; */
   background-image: url(${logo});
+  transition: transform 0.5s ease;
 
   &:hover {
     box-shadow: rgba(116, 177, 232, 0.24);
-    scale: 1.1;
+    transform: scale(1.2);
   }
 `;
