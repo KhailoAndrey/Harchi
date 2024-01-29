@@ -1,7 +1,10 @@
 # 
 <h1> 
+<a href="https://khailoandrey.github.io/Harchi/">
 <img src='./src/assets/logo/logo.png' alt='Logo of Harchi'>
-Harchi - сайт пошуку рецептів 👋
+Harchi 
+</a>
+- сайт пошуку рецептів 👋
 </h1>
 
 ## Українська версія 🥗
