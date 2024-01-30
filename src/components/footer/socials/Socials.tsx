@@ -3,19 +3,20 @@ import { BsFacebook, BsTelegram } from 'react-icons/bs';
 import { SiGmail, SiYoutube } from 'react-icons/si';
 
 import { Container, SocIcons, SocItem, TextSoc } from './Socials.styled';
+import { palette } from '@/constants/colors';
 
 function Socials() {
   return (
     <Container>
       <TextSoc>Ми в соціальних мережах</TextSoc>
       <SocIcons>
-        <IconContext.Provider value={{ color: '#fff', size: '24' }}>
+        <IconContext.Provider value={{ color: palette.mainWhite, size: '24' }}>
           <a href="https://facebook.com" target="_blank">
             <BsFacebook />
           </a>
           <a href="https://youtube.com" target="_blank">
             <SocItem>
-              <SiYoutube color="#000" size={16} />
+              <SiYoutube color={palette.mainBlack} size={16} />
             </SocItem>
           </a>
           <a href="https://web.telegram.org/" target="_blank">

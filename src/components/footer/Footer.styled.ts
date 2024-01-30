@@ -1,3 +1,4 @@
+import { palette } from './../../constants/colors/index';
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
@@ -6,8 +7,8 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   height: 236px;
-  background-color: #1e261e;
-  `;
+  background-color: ${palette.darkGreen};
+`;
 
 export const Container = styled.div`
   display: flex;  

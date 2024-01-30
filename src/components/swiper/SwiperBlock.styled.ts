@@ -7,7 +7,6 @@ export const SwiperScrollBar = styled.div<{ $ml: number }>`
   margin-bottom: 12px !important;
   opacity: 0.5;
   transition: opacity 0.3s ease;
-  /* background-color: #ff0000 !important; */
 
   &:hover {
     opacity: 1;

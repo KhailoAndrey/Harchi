@@ -1,3 +1,4 @@
+import { palette } from '@/constants/colors';
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
@@ -6,7 +7,7 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   height: 98px;
-  background-color: #f5f1ec;
+  background-color: ${palette.mainWhite};
   position: fixed;
   top: 0;
   z-index: 50;

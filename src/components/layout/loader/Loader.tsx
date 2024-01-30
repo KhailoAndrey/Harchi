@@ -1,5 +1,6 @@
 import { ThreeDots } from 'react-loader-spinner';
 import { WrapperLoader } from './Loader.styled';
+import { palette } from '@/constants/colors';
 
 const Loader = () => {
   return (
@@ -8,7 +9,7 @@ const Loader = () => {
         height="30"
         width="180"
         radius="10"
-        color="var(--main-clr-blue)"
+        color={palette.orange}
         ariaLabel="three-dots-loading"
         visible={true}
       />
