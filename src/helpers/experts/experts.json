@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "photo": "photo1.png",
+    "profession": "Кухар",
+    "name": "Наталія Петренко"
+  },
+  {
+    "id": 2,
+    "photo": "photo2.png",
+    "profession": "Кухар",
+    "name": "Поліна Світлоока"
+  },
+  {
+    "id": 3,
+    "photo": "photo3.png",
+    "profession": "Кухар",
+    "name": "Ольга Васильчук"
+  },
+  {
+    "id": 4,
+    "photo": "photo4.png",
+    "profession": "Кухар",
+    "name": "Ігор Савченко"
+  }
+]

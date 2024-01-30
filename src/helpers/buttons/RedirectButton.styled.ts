@@ -15,7 +15,7 @@ interface ButtonStyledProps {
 }
 
 export const ButtonStyled = styled.button<ButtonStyledProps>`
-  background: ${props => props.$backgroundcolor};
+  ${props => props.$backgroundcolor};
   color: ${props => props.$textcolor};
   display: flex;
   height: 48px;
@@ -23,6 +23,7 @@ export const ButtonStyled = styled.button<ButtonStyledProps>`
   justify-content: space-between;
   align-items: center;
   gap: 8px;
+  border: none;
   border-radius: 30px;
   font-family: El Messiri;
   font-size: 18px;
@@ -36,7 +37,7 @@ export const ButtonStyled = styled.button<ButtonStyledProps>`
   transform-origin: center left;
   transition: transform 1s ease;
 
-  &:hover{
+  &:hover {
     transform: scale(1.25);
     transform-origin: center left;
   }

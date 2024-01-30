@@ -3,7 +3,6 @@
 import { ButtonStyled } from './RedirectButton.styled';
 import { FaChevronRight } from 'react-icons/fa';
 
-
 const RedirectButton = ({ text, backgroundcolor, textcolor }) => {
   return (
     <ButtonStyled $backgroundcolor={backgroundcolor} $textcolor={textcolor}>
