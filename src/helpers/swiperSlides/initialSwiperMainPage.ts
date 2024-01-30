@@ -1,3 +1,5 @@
+import { gradient, palette } from './../../constants/colors/index';
+
 export const InitialPropsHero = {
   swiperflag: 'right',
   containerWidth: '100%',
@@ -14,9 +16,8 @@ export const InitialPropsHero = {
             швидкого пошуку за фільтрами`,
   redirectionbutton: {
     text: 'Спробувати',
-    backgroundcolor:
-      'linear-gradient(124deg, #EE7214 13.2%, #F4A322 63.1%, #FAD531 93.71%)',
-    textcolor: '#FBF8F6',
+    backgroundcolor: gradient.buttonOrange,
+    textcolor: palette.mainWhite,
   },
   slider: {
     size: {
@@ -75,9 +76,8 @@ export const InitialPropsMoreRecipes = {
   info: `Дізнайся ще більше крутих рецептів!`,
   redirectionbutton: {
     text: 'Більше рецептів',
-    backgroundcolor:
-      'linear-gradient(124deg, #EE7214 13.2%, #F4A322 63.1%, #FAD531 93.71%)',
-    textcolor: '#FBF8F6',
+    backgroundcolor: gradient.buttonOrange,
+    textcolor: palette.mainWhite,
   },
   slider: {
     size: {
