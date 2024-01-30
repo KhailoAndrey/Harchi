@@ -26,7 +26,6 @@ function Experts() {
     <Container>
       <Title>Експерти</Title>
       <ExpertList>{expList}</ExpertList>
-
       <div className="redirbtn">
         <RedirectButton
           text={'Дивитися більше'}
