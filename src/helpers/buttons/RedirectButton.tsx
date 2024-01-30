@@ -1,4 +1,3 @@
-// import PropTypes from 'prop-types';
 // import ChevronRight from '../../../public/heroSwiper/chevron-right.svg';
 import { ButtonStyled } from './RedirectButton.styled';
 import { FaChevronRight } from 'react-icons/fa';
@@ -19,9 +18,3 @@ const RedirectButton = ({ text, backgroundcolor, textcolor }) => {
 };
 
 export default RedirectButton;
-
-// RedirectButton.propTypes = {
-//   text: PropTypes.string.isRequired,
-//   backgroundcolor: PropTypes.string.isRequired,
-//   textcolor: PropTypes.string.isRequired,
-// };

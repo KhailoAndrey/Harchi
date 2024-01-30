@@ -1,3 +1,4 @@
+import { palette } from '@/constants/colors';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -6,7 +7,7 @@ export const Container = styled.div`
   gap: 20px;
 `;
 export const TextSoc = styled.span`
-  color: #fff;
+  color: ${palette.mainWhite};
   font-family: 'El Messiri';
   font-size: 20px;
   font-style: normal;
@@ -21,7 +22,7 @@ export const SocIcons = styled.div`
 `;
 
 export const SocItem = styled.div`
-  background-color: #fff;
+  background-color: ${palette.mainWhite};
   border-radius: 50%;
   width: 24px;
   height: 24px;

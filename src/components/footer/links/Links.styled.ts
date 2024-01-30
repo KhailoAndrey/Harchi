@@ -1,3 +1,4 @@
+import { palette } from "@/constants/colors";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -7,7 +8,7 @@ export const Container = styled.div`
 `
 
 export const Text = styled.span`
-  color: #fff;
+  color: ${palette.mainWhite};
   font-family: 'El Messiri';
   font-size: 16px;
   font-style: normal;

@@ -1,3 +1,4 @@
+import { palette } from '@/constants/colors';
 import styled from 'styled-components';
 
 export const Container = styled.div<{
@@ -35,7 +36,7 @@ export const Info = styled.div`
   font-style: normal;
   font-weight: 700;
   line-height: 130%;
-  color: #fbf8f6;
+  color: ${palette.mainWhite};
 `;
 export const InfoText = styled.span`
   font-family: El Messiri;
@@ -43,7 +44,7 @@ export const InfoText = styled.span`
   font-style: normal;
   font-weight: 400;
   line-height: 130%;
-  color: #fbf8f6;
+  color: ${palette.mainWhite};
 `;
 
 export const Slider = styled.div<{ size: { w: string; h: string } }>`

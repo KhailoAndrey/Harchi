@@ -1,3 +1,4 @@
+import { palette } from '@/constants/colors';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -5,7 +6,7 @@ export const Container = styled.div`
   flex-direction: column;
 `;
 export const Text = styled.span`
-  color: #fff;
+  color: ${palette.mainWhite};
   font-family: 'El Messiri';
   font-size: 20px;
   font-style: normal;
@@ -22,10 +23,10 @@ export const Input = styled.input`
   align-items: center;
   gap: 8px;
   border-radius: 30px;
-  border: 1px solid #fbf8f6;
+  border: 1px solid ${palette.mainWhite};
   background-color: transparent;
   margin-bottom: 20px;
-  color: #fbf8f6;
+  color: ${palette.mainWhite};
   font-family: 'El Messiri';
   font-size: 20px;
   font-style: normal;
@@ -47,7 +48,7 @@ export const SubmitBtn = styled.button`
   align-items: center;
   gap: 8px;
   border-radius: 30px;
-  background: #fbf8f6;
+  background: ${palette.mainWhite};
   transition: transform 1s ease;
   &:hover {
     transform: scale(1.1);
@@ -56,7 +57,7 @@ export const SubmitBtn = styled.button`
 
 export const TextBtn = styled.span`
   display: inline-block;
-  color: #111110;
+  color: ${palette.mainBlack};
   font-family: 'El Messiri';
   font-size: 20px;
   font-style: normal;

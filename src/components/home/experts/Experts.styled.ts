@@ -1,3 +1,4 @@
+import { palette } from '@/constants/colors';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -20,7 +21,7 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h2`
-  color: #111110;
+  color: ${palette.mainBlack};
   font-family: 'KyivType Sans';
   font-size: 36px;
   font-style: normal;
@@ -50,7 +51,7 @@ export const ExpertPhoto = styled.img`
 `;
 
 export const ExpertProf = styled.span`
-  color: #6f6b6b;
+  color: ${palette.grey};
   font-family: 'El Messiri';
   font-size: 16px;
   font-style: normal;
@@ -59,7 +60,7 @@ export const ExpertProf = styled.span`
 `;
 
 export const ExpertName = styled.span`
-  color: #111110;
+  color: ${palette.mainBlack};
   font-family: 'El Messiri';
   font-size: 24px;
   font-style: normal;

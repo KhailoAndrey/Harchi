@@ -1,3 +1,4 @@
+import { gradient, palette } from '@/constants/colors';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -11,7 +12,7 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h2`
-  color: #111110;
+  color: ${palette.mainBlack};
   font-family: 'KyivType Sans';
   font-size: 36px;
   font-style: normal;
@@ -44,19 +45,12 @@ export const Overlay = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 0px 0px 8px 8px;
-  background: linear-gradient(
-    354deg,
-    #242323 15.32%,
-    rgba(68, 65, 65, 0.78) 56%,
-    rgba(99, 95, 95, 0.55) 70%,
-    rgba(142, 136, 136, 0.25) 89%,
-    rgba(176, 169, 169, 0) 100%
-  );
+  ${gradient.whiteBlack};
   transition: height 0.5s ease-out, padding 0.5s ease-out;
 `;
 
 export const Text = styled.p`
-  color: #fbf8f6;
+  color: ${palette.mainWhite};
   font-family: 'El Messiri';
   font-size: 24px;
   font-style: normal;
