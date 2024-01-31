@@ -7,11 +7,13 @@ import Experts from '@/components/home/experts/Experts';
 import LastRecipes from '@/components/home/lastRecipes/LastRecipes';
 
 import { Wrapper } from './MainPage.styled';
+import FindRecipe from '@/components/modals/findRecipe/FindRecipe';
 
 function MainPage() {
   return (
     <Wrapper>
       <Hero />
+      <FindRecipe/>
       <Welcome />
       <Cuisine />
       <CategoryRecipes />
