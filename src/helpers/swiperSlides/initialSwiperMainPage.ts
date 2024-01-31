@@ -76,7 +76,7 @@ export const InitialPropsMoreRecipes = {
   },
   info: `Дізнайся ще більше крутих рецептів!`,
   redirectionbutton: {
-    path: "/recipes",
+    path: "/all_recipes",
     text: 'Більше рецептів',
     backgroundcolor: gradient.buttonOrange,
     textcolor: palette.mainWhite,

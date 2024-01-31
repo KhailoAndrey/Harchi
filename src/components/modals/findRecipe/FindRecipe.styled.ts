@@ -10,7 +10,7 @@ export const Overlay = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(${palette.mainWhite}, 0.7);
+  background-color: rgba(${palette.grey}, 0.7);
   z-index: 10;
 `;
 
