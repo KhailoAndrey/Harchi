@@ -15,6 +15,7 @@ export const InitialPropsHero = {
   info: `Кулінарний шик: знайдіть свій ідеальний рецепт за допомогою легкого та
             швидкого пошуку за фільтрами`,
   redirectionbutton: {
+    isModal: 'FindRecipe',
     text: 'Спробувати',
     backgroundcolor: gradient.buttonOrange,
     textcolor: palette.mainWhite,
@@ -75,6 +76,7 @@ export const InitialPropsMoreRecipes = {
   },
   info: `Дізнайся ще більше крутих рецептів!`,
   redirectionbutton: {
+    path: "/recipes",
     text: 'Більше рецептів',
     backgroundcolor: gradient.buttonOrange,
     textcolor: palette.mainWhite,

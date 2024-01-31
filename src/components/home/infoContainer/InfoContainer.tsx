@@ -34,6 +34,8 @@ function InfoContainer({ InitialProps }) {
           )}
           {InitialProps.redirectionbutton && (
             <RedirectButton
+              isModal={InitialProps.redirectionbutton.isModal}
+              path={InitialProps.redirectionbutton.path}
               text={InitialProps.redirectionbutton.text}
               backgroundcolor={InitialProps.redirectionbutton.backgroundcolor}
               textcolor={InitialProps.redirectionbutton.textcolor}

@@ -28,6 +28,8 @@ function Experts() {
       <ExpertList>{expList}</ExpertList>
       <div className="redirbtn">
         <RedirectButton
+          path={'/experts'}
+          isModal={false}
           text={'Дивитися більше'}
           backgroundcolor={gradient.red2}
           textcolor={palette.mainWhite}
