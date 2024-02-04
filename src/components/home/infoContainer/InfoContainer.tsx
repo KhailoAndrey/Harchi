@@ -11,7 +11,10 @@ import SwiperBlock from '../../swiper/SwiperBlock';
 
 function InfoContainer({ InitialProps }) {
   return (
-    <Container width={InitialProps.containerWidth}>
+    <Container
+      width={InitialProps.containerWidth}
+      $borderradius={InitialProps.borderradius}
+    >
       <>
         {InitialProps.swiperflag === 'left' && (
           <Slider size={InitialProps.slider.size}>
