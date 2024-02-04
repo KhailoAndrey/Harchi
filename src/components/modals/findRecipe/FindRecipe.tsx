@@ -83,6 +83,18 @@ function FindRecipe() {
     };
   }, [closeModal]);
 
+  useEffect(() => {
+    if (isModalOpen) {
+      const scrollbarWidth =
+        window.innerWidth - document.documentElement.clientWidth;
+      document.body.style.overflow = 'hidden';
+      document.body.style.marginRight = `${scrollbarWidth}px`;
+    } else {
+      document.body.style.overflow = 'auto';
+      document.body.style.marginRight = '0px';
+    }
+  }, [isModalOpen]);
+
   return (
     isModalOpen && (
       <Overlay onClick={handleBackdropClick}>
@@ -180,75 +192,6 @@ function FindRecipe() {
                 />
               </FormContainer>
             </form>
-            {/* <Formik
-              initialValues={{
-                keywords: '',
-              }}
-              onSubmit={async values => {
-                await new Promise(r => setTimeout(r, 500));
-                alert(JSON.stringify(values));
-                closeModal();
-              }}
-            >
-              <Form>
-                <ModalForm>
-                  <Block>
-                    <label htmlFor="keywords">Пошук по ключовим словам</label>
-                    <Field
-                      id="keywords"
-                      name="keywords"
-                      placeholder="Введіть ключове слово"
-                    />
-                    <label htmlFor="typedish">Тип страви</label>
-
-                    <Field
-                      id="typedish"
-                      name="typedish"
-                      placeholder="Оберіть тип страви"
-                    />
-                    <label htmlFor="cuisine">Кухня</label>
-
-                    <Field
-                      id="cuisine"
-                      name="cuisine"
-                      placeholder="Оберіть кухню"
-                    />
-                  </Block>
-                  <Block>
-                    <label htmlFor="time">Час приготування</label>
-
-                    <Field id="time" name="time" placeholder="Бажаний час" />
-                    <label htmlFor="calories">Кількість калорій</label>
-
-                    <Field
-                      id="calories"
-                      name="calories"
-                      placeholder="Кількість калорій"
-                    />
-                    <label htmlFor="wishproducts">Має містити продукти</label>
-
-                    <Field
-                      id="wishproducts"
-                      name="wishproducts"
-                      placeholder="Введіть продукти: курятина, помідори..."
-                    />
-                    <label htmlFor="withoutproducts">Без продуктів</label>
-
-                    <Field
-                      id="withoutproducts"
-                      name="withoutproducts"
-                      placeholder="Введіть продукти: горіхи, мед..."
-                    />
-                  </Block>
-                </ModalForm>
-                <SubmitButton
-                  text={'Підібрати рецепт'}
-                  backgroundcolor={gradient.buttonOrange}
-                  textcolor={palette.mainWhite}
-                  // onClick={onSubmit}
-                />
-              </Form>
-            </Formik> */}
           </ModalWindow>
         </ModalWrapper>
       </Overlay>
