@@ -3,6 +3,7 @@ import { gradient, palette } from './../../constants/colors/index';
 export const InitialPropsHero = {
   swiperflag: 'right',
   containerWidth: '100%',
+  borderradius: 'none',
   infoblock: {
     size: {
       w: '732px',

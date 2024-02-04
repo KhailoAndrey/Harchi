@@ -14,12 +14,12 @@ export const Wrapper = styled.div`
 `;
 
 export const Container = styled.div`
+  display: flex;
+  align-items: center;
   gap: 48px;
   width: 1440px;
   height: 100%;
   padding: 16px 80px;
-  display: flex;
-  align-items: center;
 
   @media screen and (min-width: 768px) {
     /* height: 68px;
