@@ -1,0 +1,26 @@
+[
+    {
+        "id" : 0,
+        "photo": "cuisine1.png",
+        "alt": "борщ",
+        "title": "Український борщ"
+    },
+    {
+        "id" : 1,
+        "photo": "cuisine2.png",
+        "alt": "варя",
+        "title": "Варя гуцульська"
+    },
+    {
+        "id" : 2,
+        "photo": "cuisine3.png",
+        "alt": "вареники",
+        "title": "Вареники"
+    },
+    {
+        "id" : 3,
+        "photo": "cuisine4.png",
+        "alt": "голубці",
+        "title": "Класичні голубці з м'ясом"
+    }
+]

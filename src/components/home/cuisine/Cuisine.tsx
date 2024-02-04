@@ -2,6 +2,8 @@ import RedirectButton from '@/helpers/buttons/RedirectButton';
 import { Container, RecipesList, SubTitle, Title } from './Cuisine.styled';
 import { gradient, palette } from '@/constants/colors';
 
+import cuisinePhoto from '../../../helpers/cuisineSlides/cuisinePhoto.json';
+
 function Cuisine() {
   return (
     <Container>
