@@ -11,9 +11,9 @@ export const Wrapper = styled.div`
 `;
 
 export const Container = styled.div`
-  display: flex;  
+  display: flex;
   justify-content: space-between;
-  width: 1440px;
+  width: 1440px;  
   height: 100%;
   padding: 30px 80px;
 

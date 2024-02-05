@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import { useModal } from '../../../utils/context/Context';
 import {
   Block,
@@ -20,59 +20,47 @@ import SubmitButton from '@/helpers/buttons/SubmitButton';
 import { gradient, palette } from '@/constants/colors';
 // import { Field, Form, Formik } from 'formik';
 import { useForm, SubmitHandler } from 'react-hook-form';
-
-enum TypeDishEnum {
-  breakfest = 'Сніданки',
-  firstmeal = 'Перші страви',
-  maincourses = 'Другі страви',
-  meatdishes = 'Страви з мʼяса',
-  fishdishes = 'Страви з риби',
-  salads = 'Салати',
-  snacks = 'Закуски',
-  dessert = 'Десерти',
-}
-
-enum CuisineEnum {
-  ukrainian = 'Українська',
-  georgian = 'Грузинська',
-  polish = 'Польська',
-  eastern = 'Східна',
-  italian = 'Італійська',
-  jewish = 'Єврейська',
-  french = 'Французька',
-  moroccan = 'Мароканська',
-  greek = 'Грецька',
-  japanese = 'Японська',
-  european = 'Європейська',
-  american = 'Американська',
-}
-
-interface IFormInput {
-  keywords: string;
-  typedish: TypeDishEnum;
-  cuisine: CuisineEnum;
-  cooktime: number;
-  calories: number;
-  wishproducts: string;
-  withoutproducts: string;
-}
+import { CuisineEnum, IFormInput, IOption, TypeDishEnum } from '@/types';
 
 function FindRecipe() {
   const { isModalOpen, closeModal } = useModal();
   const { register, handleSubmit, reset } = useForm<IFormInput>();
+
+  const dishTypeOptions = useMemo(
+    () => [
+      { label: ' Оберіть тип страви', value: '' },
+      ...Object.entries(TypeDishEnum).map(([key, value]) => ({
+        value: key,
+        label: value,
+      })),
+    ],
+    [TypeDishEnum]
+  );
+
+  const cuisineOptions = useMemo(
+    () => [
+      { label: ' Оберіть кухню', value: '' },
+      ...Object.entries(CuisineEnum).map(([key, value]) => ({
+        value: key,
+        label: value,
+      })),
+    ],
+    [CuisineEnum]
+  );
   const onSubmit: SubmitHandler<IFormInput> = data => {
     console.log(data);
     reset();
     closeModal();
   };
 
-  const handleBackdropClick = event => {
+  const handleBackdropClick = (event: React.MouseEvent) => {
     if (event.target === event.currentTarget) {
       closeModal();
     }
   };
+
   useEffect(() => {
-    const handleKeyDown = event => {
+    const handleKeyDown = (event: KeyboardEvent) => {
       if (event.keyCode === 27) {
         closeModal();
       }
@@ -117,38 +105,22 @@ function FindRecipe() {
                     </Block>
                     <Block>
                       <Label>Тип страви</Label>
-                      <Select {...register('typedish')} defaultValue="">
-                        <option value="" disabled hidden>
-                          Оберіть тип страви
-                        </option>
-                        <option value="breakfest">Сніданки</option>
-                        <option value="firstmeal">Перші страви</option>
-                        <option value="maincourses">Другі страви</option>
-                        <option value="meatdishes">Страви з мʼяса</option>
-                        <option value="fishdishes">Страви з риби</option>
-                        <option value="salads">Салати</option>
-                        <option value="snacks">Закуски</option>
-                        <option value="dessert">Десерти</option>
+                      <Select {...register('dishType')} defaultValue="">
+                        {dishTypeOptions.map((option: IOption) =>
+                          <option key={option.value} disabled={option.value === ''} value={option.value}>
+                            {option.label}
+                          </option>
+                        )}
                       </Select>
                     </Block>
                     <Block>
                       <Label>Кухня</Label>
                       <Select {...register('cuisine')} defaultValue="">
-                        <option value="" disabled hidden>
-                          Оберіть кухню
-                        </option>
-                        <option value="ukrainian">Українська</option>
-                        <option value="georgian">Грузинська</option>
-                        <option value="polish">Польська</option>
-                        <option value="eastern">Східна</option>
-                        <option value="italian">Італійська</option>
-                        <option value="jewish">Єврейська</option>
-                        <option value="french">Французька</option>
-                        <option value="moroccan">Мароканська</option>
-                        <option value="greek">Грецька</option>
-                        <option value="japanese">Японська</option>
-                        <option value="european">Європейська</option>
-                        <option value="american">Американська</option>
+                        {cuisineOptions.map((option: IOption) =>
+                          <option key={option.value} disabled={option.value === ''} value={option.value}>
+                            {option.label}
+                          </option>
+                        )}
                       </Select>
                     </Block>
                   </BlockForm>
@@ -157,7 +129,7 @@ function FindRecipe() {
                       <Block>
                         <Label>Час приготування</Label>
                         <Input
-                          {...register('cooktime')}
+                          {...register('cookTime')}
                           placeholder="Бажаний час, хвилин"
                         />
                       </Block>
@@ -172,14 +144,14 @@ function FindRecipe() {
                     <Block>
                       <Label>Має містити продукти</Label>
                       <Input
-                        {...register('wishproducts')}
+                        {...register('wishProducts')}
                         placeholder="Введіть продукти: курятина, помідори..."
                       />
                     </Block>
                     <Block>
                       <Label>Без продуктів</Label>
                       <Input
-                        {...register('withoutproducts')}
+                        {...register('withoutProducts')}
                         placeholder="Введіть продукти: горіхи, мед..."
                       />
                     </Block>

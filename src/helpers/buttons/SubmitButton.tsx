@@ -1,6 +1,9 @@
 import { ButtonStyled } from './SubmitButton.styled';
 
-const SubmitButton = ({ text, backgroundcolor, textcolor }) => {
+interface ISubmitButton {
+  text: string, backgroundcolor: string, textcolor: string
+}
+const SubmitButton = ({ text, backgroundcolor, textcolor }: ISubmitButton) => {
   return (
     <ButtonStyled
       type="submit"

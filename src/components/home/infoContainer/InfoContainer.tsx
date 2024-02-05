@@ -8,12 +8,16 @@ import {
 } from './InfoContainer.styled';
 import RedirectButton from '../../../helpers/buttons/RedirectButton';
 import SwiperBlock from '../../swiper/SwiperBlock';
+import { IInitialProps } from '@/types';
 
-function InfoContainer({ InitialProps }) {
+interface IInfoContainer {
+  InitialProps: IInitialProps;
+}
+function InfoContainer({ InitialProps }: IInfoContainer) {
   return (
     <Container
       width={InitialProps.containerWidth}
-      $borderradius={InitialProps.borderradius}
+      $borderradius={InitialProps?.borderradius || ''}
     >
       <>
         {InitialProps.swiperflag === 'left' && (

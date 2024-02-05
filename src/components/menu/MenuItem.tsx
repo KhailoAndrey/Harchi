@@ -1,15 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import { Item } from './MenuItem.styled';
-
+import { IMenuItem as IItem } from '../../types';
 interface IMenuItem {
-  item: {
-    label: string;
-    startIcon?: React.ReactNode;
-    endIcon?: React.ReactNode;
-    color?: string;
-    path: string;
-    options?: string[];
-  };
+  item: IItem;
 }
 function MenuItem({ item }: IMenuItem) {
   const navigate = useNavigate();
@@ -19,7 +12,7 @@ function MenuItem({ item }: IMenuItem) {
     navigate(item.path);
   };
   return (
-    <Item $color={color} onClick={onItemClick}>
+    <Item $color={color || ''} onClick={onItemClick}>
       {startIcon}
       {label}
       {endIcon}

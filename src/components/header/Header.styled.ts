@@ -17,7 +17,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   gap: 48px;
-  width: 1440px;
+  max-width: 1440px;
   height: 100%;
   padding: 16px 80px;
 
