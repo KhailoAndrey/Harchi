@@ -4,21 +4,28 @@ import { ButtonStyled } from './RedirectButton.styled';
 import { FaChevronRight } from 'react-icons/fa';
 import { useModal } from '../../utils/context/Context';
 
+interface IRedirectButton {
+  text: string,
+  backgroundcolor: string,
+  textcolor: string,
+  path?: string,
+  isModal?: boolean,
+}
 const RedirectButton = ({
   text,
   backgroundcolor,
   textcolor,
   path,
   isModal,
-}) => {
+}: IRedirectButton) => {
   const navigate = useNavigate();
   const { openModal } = useModal();
 
   const handleClick = () => {
-    if (!isModal) {
+    if (!isModal && path) {
       navigate(path);
     } else {
-      openModal(true);
+      openModal();
       // console.log(`Открываю модалку: ${isModal}`);
     }
   };

@@ -2,7 +2,6 @@ import SwiperCore from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade, Scrollbar } from 'swiper/modules';
-import PropTypes from 'prop-types';
 
 import 'swiper/css';
 import 'swiper/css/autoplay';
@@ -64,8 +63,3 @@ function SwiperBlock({ loop, sliceStartIndex, width }: ISwiperBlock) {
 }
 
 export default SwiperBlock;
-
-SwiperBlock.propTypes = {
-  sliceStartIndex: PropTypes.number.isRequired,
-  width: PropTypes.number.isRequired,
-};

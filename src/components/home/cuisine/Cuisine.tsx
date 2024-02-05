@@ -2,8 +2,7 @@ import RedirectButton from '@/helpers/buttons/RedirectButton';
 import { Container, RecipesList, SubTitle, Title } from './Cuisine.styled';
 import { gradient, palette } from '@/constants/colors';
 import CardRecipes from '@/helpers/cardOfRecipes/cardRecipes';
-import cards from "../../../helpers/cuisineSlides/cuisine.json"
-// import cuisinePhoto from '../../../helpers/cuisineSlides/cuisinePhoto.json';
+import cards from '../../../helpers/cuisineSlides/cuisine.json';
 
 function Cuisine() {
   return (
@@ -14,12 +13,13 @@ function Cuisine() {
         українській кухні!
       </SubTitle>
       <RecipesList>
-      <CardRecipes cards = {cards}
-        />
+        <CardRecipes cards={cards} />
       </RecipesList>
-        
+
       <div className="redirbtn">
         <RedirectButton
+          isModal={false}
+          path={'/'}
           text={'Дивитись більше'}
           backgroundcolor={gradient.red2}
           textcolor={palette.mainWhite}
