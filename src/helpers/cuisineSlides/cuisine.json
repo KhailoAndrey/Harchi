@@ -1,0 +1,54 @@
+[
+    {
+        "id" : 0,
+        "photo": "cuisine1.png",
+        "alt": "борщ",
+        "title": "Український борщ",
+        "describe": "Борщ – це культурне надбання України",
+        "timeOfCook": "1,5 год",
+        "difficulty": "Легко",
+        "favorite": true,
+        "ownerPhoto": "owner1.png",
+        "owner": "Поліна Світлоока",
+        "category": "Перші страви"
+    },
+    {
+        "id" : 1,
+        "photo": "cuisine2.png",
+        "alt": "варя",
+        "title": "Варя гуцульська",
+        "describe": "Це салат, який походить з Буковини",
+        "timeOfCook": "25 хв",
+        "difficulty": "Легко",
+        "favorite": false,
+        "ownerPhoto": "owner2.png",
+        "owner": "Ірина Коваленко",
+        "category": "Салати"
+    },
+    {
+        "id" : 2,
+        "photo": "cuisine3.png",
+        "alt": "вареники",
+        "title": "Вареники",
+        "describe": "Виходять ще більш пишними й ніжними",
+        "timeOfCook": "2 год",
+        "difficulty": "Складно",
+        "favorite": true,
+        "ownerPhoto": "owner3.png",
+        "owner": "Вікторія Кравченко",
+        "category": "Другі страви"
+    },
+    {
+        "id" : 3,
+        "photo": "cuisine4.png",
+        "alt": "голубці",
+        "title": "Класичні голубці з м'ясом",
+        "describe": "Колоритна страва української кухні",
+        "timeOfCook": "1 год",
+        "difficulty":  "Помірно",
+        "favorite": false,
+        "ownerPhoto": "owner4.png",
+        "owner": "Анна Григоренко",
+        "category": "Другі страви"
+    }
+]

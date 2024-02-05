@@ -41,6 +41,7 @@ export const SubTitle = styled.span`
 
 export const RecipesList = styled.ul`
   height: 450px;
-  border: 2px solid green;
   margin-bottom: 48px;
+  display: flex;
+  gap: 24px;
 `;

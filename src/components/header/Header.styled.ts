@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
 
 export const Container = styled.div`
   gap: 48px;
-  width: 1440px;
+  max-width: 1440px;
   height: 100%;
   padding: 16px 80px;
   display: flex;

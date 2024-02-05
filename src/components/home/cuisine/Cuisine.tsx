@@ -1,8 +1,9 @@
 import RedirectButton from '@/helpers/buttons/RedirectButton';
 import { Container, RecipesList, SubTitle, Title } from './Cuisine.styled';
 import { gradient, palette } from '@/constants/colors';
-
-import cuisinePhoto from '../../../helpers/cuisineSlides/cuisinePhoto.json';
+import CardRecipes from '@/helpers/cardOfRecipes/cardRecipes';
+import cards from "../../../helpers/cuisineSlides/cuisine.json"
+// import cuisinePhoto from '../../../helpers/cuisineSlides/cuisinePhoto.json';
 
 function Cuisine() {
   return (
@@ -12,7 +13,11 @@ function Cuisine() {
         Смак України в кожному страві: віддайте своїм смаковим почуттям
         українській кухні!
       </SubTitle>
-      <RecipesList />
+      <RecipesList>
+      <CardRecipes cards = {cards}
+        />
+      </RecipesList>
+        
       <div className="redirbtn">
         <RedirectButton
           text={'Дивитись більше'}
