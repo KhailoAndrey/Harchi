@@ -41,7 +41,7 @@ export const Info = styled.div`
   color: ${palette.mainWhite};
 `;
 export const InfoText = styled.span`
-  font-family: El Messiri;
+  font-family: 'El Messiri';
   font-size: 20px;
   font-style: normal;
   font-weight: 400;

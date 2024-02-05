@@ -5,7 +5,7 @@ export const Container = styled.div`
   width: 1280px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
   .redirbtn {
     display: flex;
     align-self: flex-end;

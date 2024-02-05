@@ -16,7 +16,7 @@ export const ButtonStyled = styled.button<ButtonStyledProps>`
   gap: 8px;
   border: none;
   border-radius: 30px;
-  font-family: El Messiri;
+  font-family: 'El Messiri';
   font-size: 18px;
   font-style: normal;
   font-weight: 700;

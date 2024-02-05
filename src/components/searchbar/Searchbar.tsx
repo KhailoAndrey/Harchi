@@ -35,7 +35,7 @@ const Input = styled.input<{ $fullWidth: boolean }>`
   gap: 0.5rem;
   align-items: center;
   color: ${palette.grey};
-  font-family: El Messiri;
+  font-family: 'El Messiri';
   font-size: 1rem;
 `;
 export default SearchBar;

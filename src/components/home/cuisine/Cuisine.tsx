@@ -18,8 +18,7 @@ function Cuisine() {
 
       <div className="redirbtn">
         <RedirectButton
-          isModal={false}
-          path={'/'}
+          path={'/all_recipes'}
           text={'Дивитись більше'}
           backgroundcolor={gradient.red2}
           textcolor={palette.mainWhite}

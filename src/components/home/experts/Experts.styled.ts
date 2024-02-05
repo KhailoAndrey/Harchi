@@ -6,7 +6,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
   .redirbtn {
     display: flex;
     align-self: flex-end;

@@ -26,7 +26,6 @@ const RedirectButton = ({
       navigate(path);
     } else {
       openModal();
-      // console.log(`Открываю модалку: ${isModal}`);
     }
   };
 
@@ -38,12 +37,6 @@ const RedirectButton = ({
     >
       {text}
       <FaChevronRight />
-      {/* <img
-        src={`${ChevronRight}`}
-        alt="chevron-right"
-        width="28px"
-        height="28px"
-      /> */}
     </ButtonStyled>
   );
 };

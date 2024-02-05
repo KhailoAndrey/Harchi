@@ -18,7 +18,6 @@ import {
 import { LuUtensilsCrossed } from 'react-icons/lu';
 import SubmitButton from '@/helpers/buttons/SubmitButton';
 import { gradient, palette } from '@/constants/colors';
-// import { Field, Form, Formik } from 'formik';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { CuisineEnum, IFormInput, IOption, TypeDishEnum } from '@/types';
 

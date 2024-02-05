@@ -29,6 +29,7 @@ export const SubTitle = styled.span`
 `;
 
 export const RecipesList = styled.ul`
+display: flex;
+gap: 24px;
 height: 450px;
-border: 2px solid green;
 `

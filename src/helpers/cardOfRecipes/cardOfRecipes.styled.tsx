@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Item = styled.li`
 width: 302px;
-height: 398px;
+/* height: 398px; */
 flex-direction: column;
 transition: 1s;
 &:hover {
@@ -12,7 +12,7 @@ transition: 1s;
 export const Link = styled.a`
 cursor: pointer;
 color: #111110;
-style: none;
+text-decoration: none;
 `
 
 export const Photo = styled.img`
@@ -22,7 +22,7 @@ height: 220px;
 `;
 
 export const Title = styled.p`
-font-family: El Messiri;
+font-family: 'El Messiri';
 font-size: 24px;
 font-weight: 700;
 line-height: 29px;
@@ -32,7 +32,7 @@ margin: 18px 0 12px;
 `;
 
 export const Describe = styled.span`
-font-family: El Messiri;
+font-family: 'El Messiri';
 font-size: 16px;
 font-weight: 400;
 line-height: 19px;
@@ -54,7 +54,7 @@ gap: 2px;
 `
 
 export const Time = styled.p`
-font-family: El Messiri;
+font-family: 'El Messiri';
 font-size: 16px;
 font-weight: 400;
 line-height: 19px;
@@ -65,7 +65,7 @@ margin-top: 3px;
 
 
 export const Difficulty = styled.p`
-font-family: El Messiri;
+font-family: 'El Messiri';
 font-size: 16px;
 font-weight: 400;
 line-height: 19px;
@@ -86,7 +86,7 @@ border-radius: 10px;
 `
 
 export const Owner = styled.p`
-font-family: El Messiri;
+font-family: 'El Messiri';
 font-size: 16px;
 font-weight: 400;
 line-height: 19px;
@@ -96,7 +96,7 @@ display: inline;
 `
 
 export const Category = styled.p`
-font-family: El Messiri;
+font-family: 'El Messiri';
 font-size: 16px;
 font-weight: 600;
 line-height: 16px;
