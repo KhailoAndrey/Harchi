@@ -5,14 +5,17 @@ import StarFull from '../../../public/cuisinePhoto/StarFull.svg'
 import { GoHeart } from "react-icons/go";
 import { GoHeartFill } from "react-icons/go";
 import Filter from "../../../public/cuisinePhoto/filter-edit.svg"
-
+ 
 import { useState} from "react";
+import { ICard } from "@/types";
+import { DIFFICULTY_LEVEL } from "@/constants";
+interface ICardRecipes {
+  cards: ICard[]
+}
 
-
-function CardRecipes ({cards}) {
+function CardRecipes ({cards}: ICardRecipes) {
     const [recipes, setRecipes] = useState(cards);
 
-    
   const handleFavorite = (id) => {
     const updatedRecipes = recipes.map((recipe) =>
       recipe.id === id ? { ...recipe, favorite: !recipe.favorite } : recipe
@@ -21,44 +24,46 @@ function CardRecipes ({cards}) {
     console.log(id)
   };
 
+
+
   const renderStars = (difficulty) => {
     switch (difficulty) {
-      case "Легко":
+      case DIFFICULTY_LEVEL.easy:
         return (
           <>
-            <img src={`${StarFull}`} alt="svg" width={24} />
-            <img src={`${Star}`} alt="svg" width={24} />
-            <img src={`${Star}`} alt="svg" width={24} />
+            <img src={`${StarFull}`}  width={24} />
+            <img src={`${Star}`}  width={24} />
+            <img src={`${Star}`}  width={24} />
           </>
         );
-      case "Помірно":
+      case DIFFICULTY_LEVEL.moderately :
         return (
           <>
-            <img src={`${StarFull}`} alt="svg" width={24} />
-            <img src={`${StarFull}`} alt="svg" width={24} />
-            <img src={`${Star}`} alt="svg" width={24} />
+            <img src={`${StarFull}`}  width={24} />
+            <img src={`${StarFull}`}  width={24} />
+            <img src={`${Star}`}  width={24} />
           </>
         );
-      case "Складно":
+      case DIFFICULTY_LEVEL.hard :
         return (
           <>
-            <img src={`${StarFull}`} alt="svg" width={24} />
-            <img src={`${StarFull}`} alt="svg" width={24} />
-            <img src={`${StarFull}`} alt="svg" width={24} />
+            <img src={`${StarFull}`} width={24} />
+            <img src={`${StarFull}`} width={24} />
+            <img src={`${StarFull}`} width={24} />
           </>
         );
       default:
         return null;
     }
   };
+  const currentRecipe = (id) => recipes.find((recipe) => recipe.id === id)
 
 
     return (<>
-    {cards.map(({id, photo, alt, title, describe, timeOfCook, difficulty, owner, category, ownerPhoto}) => (
+    {cards.map(({id, photo, title, describe, timeOfCook, difficulty, owner, category, ownerPhoto}) => (
         <Item key = {id}>
             <Link >
                 <Photo src={`./cuisinePhoto/${photo}`} 
-           alt = {alt}
            /></Link >
            <Title>{title}</Title>
            <Describe>{describe}</Describe>
@@ -69,15 +74,12 @@ function CardRecipes ({cards}) {
             </Cont>
 
             <Cont>
-            {/* <img src={`${StarFull}`}  alt="svg" width={24}/>
-            <img src={`${Star}`}  alt="svg" width={24}/>
-            <img src={`${Star}`}  alt="svg" width={24}/> */}
             {renderStars(difficulty)}
             <Difficulty>{difficulty}</Difficulty>
             </Cont>
 
             <Button type="button" onClick={() => handleFavorite(id)}>
-            {recipes.find((recipe) => recipe.id === id)?.favorite ? (
+            {currentRecipe(id)?.favorite ? (
               <GoHeartFill fill="#9C2B3F" size={24} />
             ) : (
               <GoHeart fill="#9C2B3F" size={24} />
@@ -87,8 +89,7 @@ function CardRecipes ({cards}) {
 
            <InfoCont>
             <Div>
-                <OwnerPhoto src={`./cuisinePhoto/${ownerPhoto}`} 
-           alt = {alt}/>
+                <OwnerPhoto src={`./cuisinePhoto/${ownerPhoto}`} />
             <Owner>{owner}</Owner>
             </Div>
             <Div>
