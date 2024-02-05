@@ -1,7 +1,5 @@
-// import { React } from 'react';
 import { palette } from '@/constants/colors';
 import styled from 'styled-components';
-// import { Field, Form, Formik } from 'formik';
 
 export const Overlay = styled.div`
   position: fixed;
