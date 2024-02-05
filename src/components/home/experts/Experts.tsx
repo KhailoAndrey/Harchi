@@ -30,7 +30,7 @@ function Experts() {
         <RedirectButton
           path={'/experts'}
           isModal={false}
-          text={'Дивитися більше'}
+          text={'Дивитись більше'}
           backgroundcolor={gradient.red2}
           textcolor={palette.mainWhite}
         ></RedirectButton>

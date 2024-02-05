@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import Loader from './loader/Loader';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
+import ToTopButton from '@/helpers/scrollBtn/ToTopBtn';
 
 function Layout() {
   return (
@@ -12,6 +13,7 @@ function Layout() {
         <Outlet />
       </Suspense>
       <Footer />
+      <ToTopButton />
     </>
   );
 }

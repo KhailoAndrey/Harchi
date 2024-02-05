@@ -3,12 +3,14 @@ import styled from 'styled-components';
 
 export const Container = styled.div<{
   width: string;
+  $borderradius: string;
 }>`
   width: ${props => props.width};
   display: flex;
   justify-content: center;
   margin-bottom: 100px;
-  border-radius: 8px;
+  border-radius: ${props =>
+    props.$borderradius ? props.$borderradius : '8px'};
   overflow: hidden;
 `;
 export const InfoBlock = styled.div<{

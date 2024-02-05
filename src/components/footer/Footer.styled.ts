@@ -2,7 +2,7 @@ import { palette } from './../../constants/colors/index';
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  width: 100vw;
+  /* width: 100vw; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,11 +11,11 @@ export const Wrapper = styled.div`
 `;
 
 export const Container = styled.div`
-  display: flex;  
-  padding: 30px 80px;
-  max-width: 1440px;
-  height: 100%;
+  display: flex;
   justify-content: space-between;
+  width: 1440px;  
+  height: 100%;
+  padding: 30px 80px;
 
   @media screen and (min-width: 768px) {
     /* height: 68px;
