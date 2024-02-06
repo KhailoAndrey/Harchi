@@ -14,16 +14,18 @@ import {
   OwnerPhoto,
   Div,
 } from './cardOfRecipes.styled';
-import TimeSvg from '../../../public/cuisinePhoto/time.svg';
-import Star from '../../../public/cuisinePhoto/Star.svg';
-import StarFull from '../../../public/cuisinePhoto/StarFull.svg';
-import { GoHeart } from 'react-icons/go';
-import { GoHeartFill } from 'react-icons/go';
-import Filter from '../../../public/cuisinePhoto/filter-edit.svg';
-
+import {
+  GoClock,
+  GoHeart,
+  GoHeartFill,
+  GoStar,
+  GoStarFill,
+} from 'react-icons/go';
+import { BiDish } from 'react-icons/bi';
 import { useEffect, useState } from 'react';
 import { ICard } from '@/types';
 import { DIFFICULTY_LEVEL } from '@/constants';
+import { palette } from '@/constants/colors';
 interface ICardRecipes {
   cards: ICard[];
 }
@@ -43,25 +45,25 @@ function CardRecipes({ cards }: ICardRecipes) {
       case DIFFICULTY_LEVEL.easy:
         return (
           <>
-            <img src={`${StarFull}`} width={24} />
-            <img src={`${Star}`} width={24} />
-            <img src={`${Star}`} width={24} />
+            <GoStarFill size={20} color={palette.orange} />
+            <GoStar size={20} fill={palette.orange} />
+            <GoStar size={20} fill={palette.orange} />
           </>
         );
       case DIFFICULTY_LEVEL.moderately:
         return (
           <>
-            <img src={`${StarFull}`} width={24} />
-            <img src={`${StarFull}`} width={24} />
-            <img src={`${Star}`} width={24} />
+            <GoStarFill size={20} color={palette.orange} />
+            <GoStarFill size={20} color={palette.orange} />
+            <GoStar size={20} fill={palette.orange} />
           </>
         );
       case DIFFICULTY_LEVEL.hard:
         return (
           <>
-            <img src={`${StarFull}`} width={24} />
-            <img src={`${StarFull}`} width={24} />
-            <img src={`${StarFull}`} width={24} />
+            <GoStarFill size={20} color={palette.orange} />
+            <GoStarFill size={20} color={palette.orange} />
+            <GoStarFill size={20} color={palette.orange} />
           </>
         );
       default:
@@ -103,7 +105,7 @@ function CardRecipes({ cards }: ICardRecipes) {
             <Describe>{describe}</Describe>
             <InfoCont>
               <Cont>
-                <img src={`${TimeSvg}`} alt="svg" width={24} />
+                <GoClock size={20} />
                 <Time>{timeOfCook}</Time>
               </Cont>
 
@@ -127,7 +129,7 @@ function CardRecipes({ cards }: ICardRecipes) {
                 <Owner>{owner}</Owner>
               </Div>
               <Div>
-                <img src={`${Filter}`} width={28} />
+                <BiDish size={28} />
                 <Category>{category}</Category>
               </Div>
             </InfoCont>

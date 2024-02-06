@@ -12,8 +12,8 @@ const LoadMore = () => {
           y2="32.2203"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.385" stop-color="#EA6500" />
-          <stop offset="0.965" stop-color="#FFCE20" />
+          <stop offset="0.385" stopColor="#EA6500" />
+          <stop offset="0.965" stopColor="#FFCE20" />
         </linearGradient>
       </svg>
       <IoIosArrowDown size={48} style={{ fill: 'url(#gradient)' }} />
