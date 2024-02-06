@@ -9,6 +9,7 @@ export const IconWrapper = styled.div`
 position: absolute;
 top: 9px;
 left: 30px;
+pointer-events: none;
 `;
 
 export const SortingList = styled.select`

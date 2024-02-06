@@ -21,6 +21,7 @@ export const IconWrapper = styled.div`
 position: absolute;
 right: 8px;
 top: 12px;
+pointer-events: none;
 `;
 
 export const SearchInput = styled.input`

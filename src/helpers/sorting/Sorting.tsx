@@ -1,4 +1,4 @@
-import { SortingBlock, IconWrapper, SortingList, Option } from "./Sorting.styled";
+import { SortingBlock, SortingList, Option, IconWrapper } from "./Sorting.styled";
 import { IoIosArrowDown } from "react-icons/io";
 
 type SortingProps = {
