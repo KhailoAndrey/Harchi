@@ -96,3 +96,14 @@ export interface IOption {
   label: string;
   value: string;
 }
+
+export interface IExpert {
+  id: number;
+  photo: string;
+  profession: string;
+  recipeAmount: number;
+  rating: number;
+  ratingAmount: number;
+  name: string;
+  description: string;
+}

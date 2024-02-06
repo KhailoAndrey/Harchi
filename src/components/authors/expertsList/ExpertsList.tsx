@@ -1,4 +1,4 @@
-import { IExpert } from '@/components/types';
+import { IExpert } from '../../../types/index';
 import ExpertCard from '../expertCard/ExpertCard';
 import {
   List,

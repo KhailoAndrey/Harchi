@@ -10,7 +10,7 @@ import {
   Rating,
 } from './ExpertCard.styled';
 import { FaRegFaceSmile } from "react-icons/fa6";
-import { IExpert } from '@/components/types';
+import { IExpert } from '../../../types/index';
 
 type ExpertCardProps = {
   expert: IExpert;
