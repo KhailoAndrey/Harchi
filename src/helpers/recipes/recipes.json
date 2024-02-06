@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "photo": "cuisine1.png",
+    "title": "Торт «Червоний Оксамит»",
+    "describe": "Цей торт стане окрасою святкового столу",
+    "category": "Торт",
+    "difficulty": "Помірно",
+    "timeOfCook": "2 год",
+    "ownerPhoto": "owner1.png",
+    "owner": "Поліна Світлоока",
+    "favorite": false
+  },
+  {
+    "id": 2,
+    "photo": "cuisine2.png",
+    "title": "Тірамісу — класичний рецепт",
+    "describe": "Ніжний італійський десерт",
+    "category": "Десерт",
+    "difficulty": "Легко",
+    "timeOfCook": "1 год",
+    "ownerPhoto": "owner1.png",
+    "owner": "Поліна Світлоока",
+    "favorite": false
+  },
+  {
+    "id": 3,
+    "photo": "cuisine3.png",
+    "title": "Український борщ",
+    "describe": "Борщ – це культурне надбання України",
+    "category": "Перші страви",
+    "difficulty": "Легко",
+    "timeOfCook": "1,5 год",
+    "ownerPhoto": "owner1.png",
+    "owner": "Поліна Світлоока",
+    "favorite": false
+  },
+  {
+    "id": 4,
+    "photo": "cuisine4.png",
+    "title": "Паста пенне з тертим сиром та базиліком",
+    "describe": "Страви італійської кухні на нашому столі",
+    "category": "Другі страви",
+    "difficulty": "Легко",
+    "timeOfCook": "25 хв",
+    "ownerPhoto": "owner1.png",
+    "owner": "Поліна Світлоока",
+    "favorite": true
+  },
+  {
+    "id": 5,
+    "photo": "cuisine4.png",
+    "title": "Шарлотка - яблучний пиріг",
+    "describe": "Найпростіший і найсмачніший пиріг",
+    "category": "Випічка",
+    "difficulty": "Складно",
+    "timeOfCook": "1 год",
+    "ownerPhoto": "owner1.png",
+    "owner": "Поліна Світлоока",
+    "favorite": false
+  },
+  {
+    "id": 6,
+    "photo": "cuisine3.png",
+    "title": "Дорадо з сезонними овочами",
+    "describe": "Чудовий варіант на обід або вечерю",
+    "category": "Страви з риби",
+    "difficulty": "Помірно",
+    "timeOfCook": "40 хв",
+    "ownerPhoto": "owner1.png",
+    "owner": "Поліна Світлоока",
+    "favorite": false
+  },
+  {
+    "id": 7,
+    "photo": "cuisine4.png",
+    "title": "Торт «Червоний Оксамит»",
+    "describe": "Цей торт стане окрасою святкового столу",
+    "category": "Торт",
+    "difficulty": "Помірно",
+    "timeOfCook": "2 год",
+    "ownerPhoto": "owner1.png",
+    "owner": "Поліна Світлоока",
+    "favorite": true
+  },
+  {
+    "id": 2,
+    "photo": "cuisine1.png",
+    "title": "Тірамісу — класичний рецепт",
+    "describe": "Ніжний італійський десерт",
+    "category": "Десерт",
+    "difficulty": "Легко",
+    "timeOfCook": "1 год",
+    "ownerPhoto": "owner1.png",
+    "owner": "Поліна Світлоока",
+    "favorite": false
+  }
+]
