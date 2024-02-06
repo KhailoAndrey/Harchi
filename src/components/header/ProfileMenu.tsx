@@ -1,6 +1,7 @@
 import { ChangeEvent, useEffect, useState } from 'react';
 import SearchBar from '../searchbar/Searchbar';
 import { useDebounce } from '@/hooks/useDebouce';
+import { SiCodechef } from 'react-icons/si';
 import styled from 'styled-components';
 
 function ProfileMenu() {
@@ -22,7 +23,7 @@ function ProfileMenu() {
         placeholder="Пошук"
         fullWidth
       />
-      <div>Profile Icon</div>
+      <SiCodechef size={48}/>
     </Wrapper>
   );
 }
