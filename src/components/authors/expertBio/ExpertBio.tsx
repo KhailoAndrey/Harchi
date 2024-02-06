@@ -1,4 +1,4 @@
-import { IExpert } from "@/components/types";
+import { IExpert } from "@/types";
 import { Bio, Description, ExpertImg, InfoBlock, Name, Rating, RatingBlock, RecipesAmount, Wrapper } from "./ExpertBio.styled";
 import { FaRegFaceSmile } from "react-icons/fa6";
 

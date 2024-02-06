@@ -26,7 +26,7 @@ function SwiperBlock({ loop, sliceStartIndex, width }: ISwiperBlock) {
     speed: 2000,
     effect: 'fade',
     fadeEffect: {
-      crossFade: true,
+      crossFade: false,
     },
     autoplay: {
       delay: 2000,

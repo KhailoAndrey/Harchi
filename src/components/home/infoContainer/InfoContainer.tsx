@@ -6,9 +6,9 @@ import {
   InfoText,
   Slider,
 } from './InfoContainer.styled';
-import RedirectButton from '../../../helpers/buttons/RedirectButton';
-import SwiperBlock from '../../swiper/SwiperBlock';
 import { IInitialProps } from '@/types';
+import SwiperBlock from '@/components/swiper/SwiperBlock';
+import RedirectButton from '@/helpers/buttons/RedirectButton';
 
 interface IInfoContainer {
   InitialProps: IInitialProps;

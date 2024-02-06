@@ -1,7 +1,7 @@
 import Sorting from '@/helpers/sorting/Sorting';
 import { SelectBlock, Text, Title, Wrapper } from './ExpertsPage.styled';
-import ExpertsList from '@/components/authors/expertsList/ExpertsList';
 import { EXPERTS_SORTING } from '@/constants/expertsSorting';
+import ExpertsList from '@/components/authors/expertsList/ExpertsList';
 
 function ExpertsPage() {
   return (
