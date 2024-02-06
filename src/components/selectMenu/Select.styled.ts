@@ -29,7 +29,7 @@ height: 48px;
 padding: 0 16px;
 border: 1px solid ${palette.grey};
 border-radius: 30px;
-background: #f5f1ec;
+background: ${palette.beige};
 font-family: 'El Messiri';
 font-size: 16px;
 font-height: 1.2;

@@ -1,13 +1,9 @@
-import { EXPERTS_SORTING } from '@/constants/expertsSorting';
 import { IExpert } from '../../../types/index';
 import ExpertCard from '../expertCard/ExpertCard';
 import {
   List,
-  ListWrapper,
-  LoadMoreIcon,
-  SelectBlock
+  LoadMoreIcon
 } from './ExpertsList.styled';
-import Sorting from '@/helpers/sorting/Sorting';
 import LoadMore from '@/components/icons/LoadMoreIcon';
 
 const experts:IExpert[] = [
@@ -136,16 +132,11 @@ const experts:IExpert[] = [
 const ExpertsList = () => {
   return (
     <>
-      <ListWrapper>
-        <SelectBlock>
-          <Sorting list={EXPERTS_SORTING} />
-        </SelectBlock>
         <List>
           {experts.map(expert => (
             <ExpertCard key={expert.id} expert={expert}></ExpertCard>
           ))}
         </List>
-      </ListWrapper>
       <LoadMoreIcon>
             <LoadMore />
       </LoadMoreIcon>

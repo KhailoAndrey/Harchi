@@ -1,8 +1,8 @@
 import { SearchInput, Wrapper} from './Select.styled';
-import SelectCalories from './SelectCalories/SelectCalories';
-import SelectCategory from './SelectTypeDish/SelectTypeDish';
-import SelectCuisine from './SelectCuisine/SelectCuisine';
-import SelectTime from './SelectTime/SelectTime';
+import SelectCalories from '../../helpers/select/SelectCalories/SelectCalories';
+import SelectCategory from '../../helpers/select/SelectTypeDish/SelectTypeDish';
+import SelectCuisine from '../../helpers/select/SelectCuisine/SelectCuisine';
+import SelectTime from '../../helpers/select/SelectTime/SelectTime';
 
 const Select = () => {
   return (

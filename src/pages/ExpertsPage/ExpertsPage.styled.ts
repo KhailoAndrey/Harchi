@@ -19,6 +19,12 @@ font-size: 36px;
 line-height: 1.3;
 font-weight: 700;
 margin-top: 24px;
-margin-bottom: 104px;
+margin-bottom: 32px;
 max-width: 717px;
+`;
+
+export const SelectBlock = styled.div`
+margin-bottom: 24px;
+display: flex;
+justify-content: flex-end;
 `;

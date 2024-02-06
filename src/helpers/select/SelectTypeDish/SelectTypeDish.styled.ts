@@ -1,10 +1,11 @@
+import { palette } from "@/constants/colors";
 import styled from "styled-components";
 
 export const SelectItem = styled.select`
 width: 127px;
 height: 48px;
 padding: 0 8px;
-background-color: #f5f1ec;
+background-color: ${palette.beige};
 border: transparent;
 border-radius: 30px;
 font-family: 'El Messiri';

@@ -24,7 +24,7 @@ display:flex;
 align-items: center;
 gap: 24px;
 margin-top: 8px;
-margin-bottom: 26.5px;
+margin-bottom: 24px;
 `
 
 export const RecipesAmount = styled.p`

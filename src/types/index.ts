@@ -118,10 +118,11 @@ export enum CaloriesAmountEnum {
 }
 
 export enum TimeEnum {
-  less100 = 'до 30 хв',
+  less15m = 'до 15 хв',
+  less30m = 'до 30 хв',
   low = '30хв - 1 год',
   mediumLow = '1 - 2 год',
   medium = '2 - 3 год',
   mediumHigh = '4 - 5 год',
-  more500 = 'більше 5 год',
+  more5h = 'більше 5 год',
 }

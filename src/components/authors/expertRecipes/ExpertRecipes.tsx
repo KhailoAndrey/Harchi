@@ -7,7 +7,7 @@ import {
   TitleWrapper,
   LoadMoreIcon,
 } from './ExpertRecipes.styled';
-import Select from '@/helpers/select/Select';
+import Select from '@/components/selectMenu/Select';
 import CardRecipes from '@/helpers/cardOfRecipes/cardRecipes';
 import recipes from '../../../helpers/recipes/recipes.json';
 import { EXPERT_RESIPES_SORTING } from '@/constants/expertsRecipesSorting';

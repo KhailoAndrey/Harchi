@@ -1,8 +1,6 @@
 import styled from 'styled-components';
-import { gradient, palette } from '@/constants/colors';
+import { palette } from '@/constants/colors';
 import { Link } from 'react-router-dom';
-
-export const ExpertItem = styled.li``;
 
 export const ExpertLink = styled(Link)`
 font-family: 'El Messiri';

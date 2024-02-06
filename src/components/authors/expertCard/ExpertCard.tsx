@@ -1,5 +1,4 @@
 import {
-  ExpertItem,
   ExpertLink,
   ExpertImg,
   ProfessionTitle,
@@ -20,7 +19,7 @@ const ExpertCard = ({
   expert: { id, photo, profession, recipeAmount, rating, ratingAmount, name },
 }:ExpertCardProps) => {
   return (
-    <ExpertItem>
+    <li>
       <ExpertLink to={`/experts/${id}`}>
         <ExpertImg src={photo} />
         <ProfessionTitle>{profession}</ProfessionTitle>
@@ -35,7 +34,7 @@ const ExpertCard = ({
         </InfoBlock>
         <ExpertName>{name}</ExpertName>
       </ExpertLink>
-    </ExpertItem>
+    </li>
   );
 };
 

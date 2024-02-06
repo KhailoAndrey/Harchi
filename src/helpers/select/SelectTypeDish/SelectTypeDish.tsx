@@ -2,7 +2,7 @@ import { IoIosArrowDown } from 'react-icons/io';
 import {
   SelectItem,
 } from './SelectTypeDish.styled';
-import { Block, IconWrapper, Option } from '../Select.styled';
+import { Block, IconWrapper, Option } from '../../../components/selectMenu/Select.styled';
 import { useMemo } from 'react';
 import { TypeDishEnum } from '@/types';
 
