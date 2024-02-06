@@ -2,7 +2,7 @@ import { palette } from '@/constants/colors';
 import styled from 'styled-components';
 
 export const SortingBlock = styled.button`
-display: flex; 
+  display: flex;
   align-items: center;
   position: relative;
   height: 48px;
@@ -16,6 +16,7 @@ display: flex;
     left: 30px;
     top: 50%;
     transform: translateY(-50%);
+    pointer-events: none;
   }
   &:hover {
     border: 1px solid transparent;
@@ -23,7 +24,7 @@ display: flex;
 `;
 
 export const SortingList = styled.select`
-flex: 1; 
+  flex: 1;
   height: 48px;
   padding-left: 60px;
   padding-right: 30px;
