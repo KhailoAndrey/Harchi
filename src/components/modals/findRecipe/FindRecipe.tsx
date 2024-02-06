@@ -108,7 +108,7 @@ function FindRecipe() {
                         {dishTypeOptions.map((option: IOption) => (
                           <option
                             key={option.value}
-                            disabled={option.value === ''}
+                            hidden={option.value === ''}
                             value={option.value}
                           >
                             {option.label}
@@ -122,7 +122,7 @@ function FindRecipe() {
                         {cuisineOptions.map((option: IOption) => (
                           <option
                             key={option.value}
-                            disabled={option.value === ''}
+                            hidden={option.value === ''}
                             value={option.value}
                           >
                             {option.label}
