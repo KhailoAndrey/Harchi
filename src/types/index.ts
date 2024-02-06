@@ -96,3 +96,33 @@ export interface IOption {
   label: string;
   value: string;
 }
+
+export interface IExpert {
+  id: number;
+  photo: string;
+  profession: string;
+  recipeAmount: number;
+  rating: number;
+  ratingAmount: number;
+  name: string;
+  description: string;
+}
+
+export enum CaloriesAmountEnum {
+  less100 = 'менше 100 кКал',
+  low = '100-200 кКал',
+  mediumLow = '200-300 кКал',
+  medium = '300-400 кКал',
+  mediumHigh = '400-500 кКал',
+  more500 = 'більше 500 кКал',
+}
+
+export enum TimeEnum {
+  less15m = 'до 15 хв',
+  less30m = 'до 30 хв',
+  low = '30хв - 1 год',
+  mediumLow = '1 - 2 год',
+  medium = '2 - 3 год',
+  mediumHigh = '4 - 5 год',
+  more5h = 'більше 5 год',
+}
