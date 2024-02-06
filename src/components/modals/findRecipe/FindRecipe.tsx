@@ -47,7 +47,7 @@ function FindRecipe() {
     [CuisineEnum]
   );
   const onSubmit: SubmitHandler<IFormInput> = data => {
-    console.log(data);
+    console.log(data); //не забути прибрати
     reset();
     closeModal();
   };

@@ -8,11 +8,11 @@ import ToTopButton from '@/helpers/scrollBtn/ToTopBtn';
 function Layout() {
   return (
     <>
-      <Header />
       <Suspense fallback={<Loader />}>
+        <Header />
         <Outlet />
+        <Footer />
       </Suspense>
-      <Footer />
       <ToTopButton />
     </>
   );
