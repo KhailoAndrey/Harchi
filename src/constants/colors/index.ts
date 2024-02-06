@@ -18,9 +18,11 @@ export const palette = {
 export const gradient = {
   buttonOrange:
     'background: linear-gradient(124.14deg, #EE7214 13.2%, #F4A322 63.1%, #FAD531 93.71%);',
-
+  star: 'linear-gradient(162deg, #EA6500 59.46%, #FFCE20 91.97%);',
   red2: 'background: linear-gradient(91.21deg, #B6143B 6.48%, #C84738 43.92%, #FAD531 98.97%);  ',
   red: 'background: linear-gradient(91.21deg, #FCCD00 12.95%, #C84738 70.76%, #B6143B 98.97%); ',
   whiteBlack:
     'background: linear-gradient(354.43deg, #242323 15.32%, rgba(68, 65, 65, 0.776042) 56.05%, rgba(99, 95, 95, 0.552083) 70.82%, rgba(142, 136, 136, 0.247486) 89.15%, rgba(176, 169, 169, 0) 100.35%);',
 };
+
+
