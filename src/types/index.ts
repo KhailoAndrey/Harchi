@@ -107,3 +107,21 @@ export interface IExpert {
   name: string;
   description: string;
 }
+
+export enum CaloriesAmountEnum {
+  less100 = 'менше 100 кКал',
+  low = '100-200 кКал',
+  mediumLow = '200-300 кКал',
+  medium = '300-400 кКал',
+  mediumHigh = '400-500 кКал',
+  more500 = 'більше 500 кКал',
+}
+
+export enum TimeEnum {
+  less100 = 'до 30 хв',
+  low = '30хв - 1 год',
+  mediumLow = '1 - 2 год',
+  medium = '2 - 3 год',
+  mediumHigh = '4 - 5 год',
+  more500 = 'більше 5 год',
+}

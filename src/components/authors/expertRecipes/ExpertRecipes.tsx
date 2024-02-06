@@ -1,22 +1,24 @@
 import Sorting from '@/helpers/sorting/Sorting';
-import {Wrapper, 
+import {
+  Wrapper,
   RecipesList,
   SelectingWrapper,
   Title,
-  TitleWrapper
+  TitleWrapper,
+  LoadMoreIcon,
 } from './ExpertRecipes.styled';
 import Select from '@/helpers/select/Select';
 import CardRecipes from '@/helpers/cardOfRecipes/cardRecipes';
 import recipes from '../../../helpers/recipes/recipes.json';
-
-const SortingList:string[] = ['За рейтингом', 'За складністю', 'За датою створення'];
+import { EXPERT_RESIPES_SORTING } from '@/constants/expertsRecipesSorting';
+import LoadMore from '@/components/icons/LoadMoreIcon';
 
 const ExpertRecipes = () => {
   return (
     <Wrapper>
       <TitleWrapper>
         <Title>Рецепти автора</Title>
-        <Sorting list={SortingList} />
+        <Sorting list={EXPERT_RESIPES_SORTING} />
       </TitleWrapper>
       <SelectingWrapper>
         <Select />
@@ -24,6 +26,9 @@ const ExpertRecipes = () => {
       <RecipesList>
         <CardRecipes cards={recipes} />
       </RecipesList>
+      <LoadMoreIcon>
+        <LoadMore />
+      </LoadMoreIcon>
     </Wrapper>
   );
 };

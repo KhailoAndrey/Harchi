@@ -105,21 +105,29 @@ function FindRecipe() {
                     <Block>
                       <Label>Тип страви</Label>
                       <Select {...register('dishType')} defaultValue="">
-                        {dishTypeOptions.map((option: IOption) =>
-                          <option key={option.value} disabled={option.value === ''} value={option.value}>
+                        {dishTypeOptions.map((option: IOption) => (
+                          <option
+                            key={option.value}
+                            hidden={option.value === ''}
+                            value={option.value}
+                          >
                             {option.label}
                           </option>
-                        )}
+                        ))}
                       </Select>
                     </Block>
                     <Block>
                       <Label>Кухня</Label>
                       <Select {...register('cuisine')} defaultValue="">
-                        {cuisineOptions.map((option: IOption) =>
-                          <option key={option.value} disabled={option.value === ''} value={option.value}>
+                        {cuisineOptions.map((option: IOption) => (
+                          <option
+                            key={option.value}
+                            hidden={option.value === ''}
+                            value={option.value}
+                          >
                             {option.label}
                           </option>
-                        )}
+                        ))}
                       </Select>
                     </Block>
                   </BlockForm>
