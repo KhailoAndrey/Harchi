@@ -1,17 +1,14 @@
-import { Container, Text } from './Links.styled';
+import { menuItems } from '@/constants/footerlinks';
+import { Container } from './Links.styled';
+import { IMenuItem } from '@/types';
+import MenuItem from '@/components/menu/MenuItem';
 
 function Links() {
   return (
     <Container>
-      <a href="./receipts">
-        <Text>Всі рецепти</Text>
-      </a>
-      <a href="./book">
-        <Text>Моя кулінарна книга</Text>
-      </a>
-      <a href="./experts">
-        <Text>Експерти</Text>
-      </a>
+      {menuItems.map((item: IMenuItem) => (
+        <MenuItem key={item.id} item={item} />
+      ))}
     </Container>
   );
 }
