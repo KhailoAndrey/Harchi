@@ -1,0 +1,1 @@
+// write here only types/interfaces that connected with redux logic
