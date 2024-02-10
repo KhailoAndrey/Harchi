@@ -127,9 +127,14 @@ export enum TimeEnum {
   more5h = 'більше 5 год',
 }
 
-export interface ISlide {
-  id: number;
-  photo: string;
-  alt: string;
+export interface IRecipe {
+  _id: string;
+  mainPhotoURL: string;
   title: string;
+  description: string;
+  category: string;
+  cookTime: string;
+  favorite: boolean;
+
+
 }
