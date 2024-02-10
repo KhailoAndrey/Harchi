@@ -10,6 +10,8 @@ import 'swiper/css/effect-fade';
 
 import slides from '../../../helpers/categorySlides/slides.json';
 
+import { NavLink } from 'react-router-dom';
+
 import {
   Container,
   Image,
@@ -56,10 +58,12 @@ export default function CategoryRecipes() {
   const swiperSlides = slides.map(({ id, photo, alt, title }) => (
     <SwiperSlide key={id}>
       <SlideContainer>
-        <Image src={`./categorySwaiper/${photo}`} alt={alt} />
-        <Overlay>
-          <Text>{title}</Text>
-        </Overlay>
+        <NavLink to={`/all_recipes/${title}`}>
+          <Image src={`./categorySwiper/${photo}`} alt={alt} />
+          <Overlay>
+            <Text>{title}</Text>
+          </Overlay>
+        </NavLink>
       </SlideContainer>
     </SwiperSlide>
   ));

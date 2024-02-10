@@ -126,3 +126,15 @@ export enum TimeEnum {
   mediumHigh = '4 - 5 год',
   more5h = 'більше 5 год',
 }
+
+export interface IRecipe {
+  _id: string;
+  mainPhotoURL: string;
+  title: string;
+  description: string;
+  category: string;
+  cookTime: string;
+  favorite: boolean;
+
+
+}
