@@ -126,3 +126,10 @@ export enum TimeEnum {
   mediumHigh = '4 - 5 год',
   more5h = 'більше 5 год',
 }
+
+export interface ISlide {
+  id: number;
+  photo: string;
+  alt: string;
+  title: string;
+}
