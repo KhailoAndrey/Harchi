@@ -2,9 +2,10 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import {BASE_URL} from '../../constants/api';
 import * as API from '../../utils/api';
-import { Wrapper, SH1Title, SDivLine } from "./RecipeCategoryPage.styled";
-import { IRecipe } from '../../../types/index';
-import image from '../../assets/images/image-not-found.webp';
+import { Wrapper, SDivContainer, SH1Title, SDivLine, SLi } from "./RecipeCategoryPage.styled";
+import CategoryRecipe from "../../components/CategoryRecipe/CategoryRecipe";
+
+
 
 const RecipeCategoryPage = () =>{
     const { categoryName } = useParams();
@@ -20,7 +21,7 @@ const RecipeCategoryPage = () =>{
             API.getFetchQuery(fetchQuery)
             .then(response=>{  
                 setRecipes(response);
-                // console.log("response=", response);
+                console.log("response=", response);
             })
             .catch (error=>{
                 console.log(error);
@@ -34,23 +35,19 @@ const RecipeCategoryPage = () =>{
 
     return (
         <Wrapper>
-            <SH1Title>{categoryName}</SH1Title>
-            <SDivLine/>
-            <ul>
-            {recipes.length>0 && recipes.map((recipe, index)=>(
-                <li key={index}>
-                    <p>{recipe.title}</p>
-                    <p>{recipe.description}</p>
-                    <img src={recipe?.mainPhotoURL || image} alt={recipe.title} width="628px"/>
-                    <p>{recipe.cookTime}</p>
-                    <p>{recipe.difficulty}</p>
-                    <p>{recipe.favorite}</p>
-                </li>
-            ))}
-            </ul>
-            
+            <SDivContainer>
+                <SH1Title>{categoryName}</SH1Title>
+                <SDivLine/>
+                <ul>
+                {recipes.length>0 && recipes.map((recipe, index)=>(
+                    <SLi key={index}>
+                        <CategoryRecipe recipe={recipe}/>
+                    </SLi>
+                ))}
+                </ul>
+                
   
-
+            </SDivContainer>
         </Wrapper>
     );
 }

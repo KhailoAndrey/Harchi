@@ -18,14 +18,16 @@ import {
   GoClock,
   GoHeart,
   GoHeartFill,
-  GoStar,
-  GoStarFill,
+  // GoStar,
+  // GoStarFill,
 } from 'react-icons/go';
 import { BiDish } from 'react-icons/bi';
 import { useEffect, useState } from 'react';
 import { ICard } from '@/types';
-import { DIFFICULTY_LEVEL } from '@/constants';
-import { palette } from '@/constants/colors';
+// import { DIFFICULTY_LEVEL } from '@/constants';
+// import { palette } from '@/constants/colors';
+
+import renderStars from '../renderStars/renderStars';
 interface ICardRecipes {
   cards: ICard[];
 }
@@ -40,36 +42,36 @@ function CardRecipes({ cards }: ICardRecipes) {
     setRecipes(updatedRecipes);
   };
 
-  const renderStars = (difficulty: string) => {
-    switch (difficulty) {
-      case DIFFICULTY_LEVEL.easy:
-        return (
-          <>
-            <GoStarFill size={20} color={palette.orange} />
-            <GoStar size={20} fill={palette.orange} />
-            <GoStar size={20} fill={palette.orange} />
-          </>
-        );
-      case DIFFICULTY_LEVEL.moderately:
-        return (
-          <>
-            <GoStarFill size={20} color={palette.orange} />
-            <GoStarFill size={20} color={palette.orange} />
-            <GoStar size={20} fill={palette.orange} />
-          </>
-        );
-      case DIFFICULTY_LEVEL.hard:
-        return (
-          <>
-            <GoStarFill size={20} color={palette.orange} />
-            <GoStarFill size={20} color={palette.orange} />
-            <GoStarFill size={20} color={palette.orange} />
-          </>
-        );
-      default:
-        return null;
-    }
-  };
+  // const renderStars = (difficulty: string) => {
+  //   switch (difficulty) {
+  //     case DIFFICULTY_LEVEL.easy:
+  //       return (
+  //         <>
+  //           <GoStarFill size={20} color={palette.orange} />
+  //           <GoStar size={20} fill={palette.orange} />
+  //           <GoStar size={20} fill={palette.orange} />
+  //         </>
+  //       );
+  //     case DIFFICULTY_LEVEL.moderately:
+  //       return (
+  //         <>
+  //           <GoStarFill size={20} color={palette.orange} />
+  //           <GoStarFill size={20} color={palette.orange} />
+  //           <GoStar size={20} fill={palette.orange} />
+  //         </>
+  //       );
+  //     case DIFFICULTY_LEVEL.hard:
+  //       return (
+  //         <>
+  //           <GoStarFill size={20} color={palette.orange} />
+  //           <GoStarFill size={20} color={palette.orange} />
+  //           <GoStarFill size={20} color={palette.orange} />
+  //         </>
+  //       );
+  //     default:
+  //       return null;
+  //   }
+  // };
   const currentRecipe = (id: number) =>
     recipes.find(recipe => recipe.id === id);
 
