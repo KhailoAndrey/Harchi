@@ -6,6 +6,10 @@ export const Wrapper = styled.div`
   width: 1440px;
 `;
 
+export const SDivContainer = styled.div`
+  padding: 0 80px;
+`;
+
 export const SH1Title = styled.h1`
 font-family: 'El Messiri';
 font-size: 36px;
@@ -18,4 +22,13 @@ margin-bottom: 24px;
 
 export const SDivLine = styled.div`
   border-bottom: 1px solid ${palette.grey};
+  margin-bottom: 24px;
 `;
+
+export const SLi = styled.li`
+  &:last-child {
+    margin-bottom: 80px;
+  }
+  margin-bottom: 24px;
+`;
+

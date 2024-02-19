@@ -134,7 +134,11 @@ export interface IRecipe {
   description: string;
   category: string;
   cookTime: string;
+  difficulty: string;
   favorite: boolean;
+  owner: string;
+  username: string;
+  avatar: string;
 
 
 }
