@@ -1,4 +1,4 @@
-import Sorting from '@/helpers/sorting/Sorting';
+import Sorting from '@/components/sorting/Sorting';
 import {
   Wrapper,
   RecipesList,

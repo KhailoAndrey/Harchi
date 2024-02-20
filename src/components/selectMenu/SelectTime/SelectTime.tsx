@@ -1,27 +1,25 @@
 import { IoIosArrowDown } from 'react-icons/io';
-import {
-  SelectItem,
-} from './SelectTypeDish.styled';
-import { Block, IconWrapper, Option } from '../../../components/selectMenu/Select.styled';
+import { SelectItem } from './SelectTime.styled';
+import { Block, IconWrapper, Option } from '../Select.styled';
 import { useMemo } from 'react';
-import { TypeDishEnum } from '@/types';
+import { TimeEnum } from '@/types';
 
-const SelectCategory = () => {
-    const typeDishOptions = useMemo(
+const SelectTime = () => {
+  const timeOptions = useMemo(
     () => [
-      { label: 'Тип страви', value: '' },
-      ...Object.entries(TypeDishEnum).map(([key, value]) => ({
+      { label: 'Час приготування', value: '' },
+      ...Object.entries(TimeEnum).map(([key, value]) => ({
         value: key,
         label: value,
       })),
     ],
-    [TypeDishEnum]
+    [TimeEnum]
   );
 
   return (
       <Block>
         <SelectItem defaultValue="">
-          {typeDishOptions.map(item => (
+          {timeOptions.map(item => (
           <Option
             key={item.value}
             hidden={item.value === ''}
@@ -39,4 +37,4 @@ const SelectCategory = () => {
   );
 };
 
-export default SelectCategory;
+export default SelectTime;

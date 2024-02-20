@@ -1,5 +1,5 @@
 import ExpertBio from "@/components/authors/expertBio/ExpertBio";
-import { Wrapper } from "./ExpertProfile.styled";
+import { Wrapper } from "./ExpertProfilePage.styled";
 import ExpertRecipes from "@/components/authors/expertRecipes/ExpertRecipes";
 
 const ExpertProfile = () => {

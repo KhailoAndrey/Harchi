@@ -1,6 +1,6 @@
 import { IoIosArrowDown } from 'react-icons/io';
 import { SelectItem } from './SelectCalories.styled';
-import { Block, IconWrapper, Option } from '../../../components/selectMenu/Select.styled';
+import { Block, IconWrapper, Option } from '../Select.styled';
 import { useMemo } from 'react';
 import { CaloriesAmountEnum } from '@/types';
 

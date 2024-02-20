@@ -7,9 +7,11 @@ align-items: center;
 `
 
 export const ExpertImg = styled.img`
-width: 193px;
+width:193px;
 height: 193px;
 border-radius: 50%;
+object-fit: cover;
+object-position: center;
 `
 export const Bio = styled.div`
 font-family: 'El Messiri';

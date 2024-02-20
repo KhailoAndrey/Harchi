@@ -1,4 +1,4 @@
-import Sorting from '@/helpers/sorting/Sorting';
+import Sorting from '@/components/sorting/Sorting';
 import { SelectBlock, Text, Title, Wrapper } from './ExpertsPage.styled';
 import { EXPERTS_SORTING } from '@/constants/expertsSorting';
 import ExpertsList from '@/components/authors/expertsList/ExpertsList';

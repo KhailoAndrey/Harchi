@@ -4,7 +4,8 @@ import { FaRegFaceSmile } from "react-icons/fa6";
 
 const expert:IExpert = 
   {
-    id: 1,
+  id: 1,
+    email:'myemail@gmail.com',
     photo: 'public/experts/photo2.png',
     profession: 'Кухар, телеведучий',
     recipeAmount: 50,
@@ -18,7 +19,7 @@ const ExpertBio = () => {
 
   return (
     <Wrapper>
-      <ExpertImg src={expert.photo} />
+        <ExpertImg src={expert.photo} />
       <Bio>
         <Name>{expert.name}</Name>
         <InfoBlock>

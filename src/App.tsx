@@ -6,7 +6,8 @@ const MainPage = lazy(() => import('./pages/MainPage/MainPage'));
 const RecipePage = lazy(() => import('./pages/RecipePage/RecipePage'));
 const RecipeCategoryPage = lazy(() => import('./pages/RecipeCategoryPage/RecipeCategoryPage'));
 const ExpertsPage = lazy(() => import('./pages/ExpertsPage/ExpertsPage'));
-const ExpertProfile = lazy(() => import('./pages/ExpertProfile/ExpertProfile'));
+const ExpertProfilePage = lazy(() => import('./pages/ExpertProfilePage/ExpertProfilePage'));
+const ExpertEditPage = lazy(() => import('./pages/ExpertEditPage/ExpertEditPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage/NotFoundPage'));
 
 function App() {
@@ -18,7 +19,8 @@ function App() {
           <Route path="all_recipes" element={<RecipePage />} />
           <Route path="all_recipes/:categoryName" element={<RecipeCategoryPage />} />
           <Route path="experts" element={<ExpertsPage />} />
-          <Route path="experts/:expertId" element={<ExpertProfile />} />
+          <Route path="experts/:expertId" element={<ExpertProfilePage />} />
+          <Route path="experts/edit" element={<ExpertEditPage />}/>
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
