@@ -1,4 +1,4 @@
-import { palette } from "@/constants/colors";
+import { gradient, palette } from "@/constants/colors";
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
@@ -38,6 +38,18 @@ export const IconsBlock = styled.div`
 display:flex;
 align-items: center;
 gap:12px;
+`
+
+export const Icon = styled.div`
+width:24px;
+heigth:24px;
+color: ${palette.orange};
+transition-property: color;
+transition-duration: 250ms;
+cursor: pointer;
+&:hover{
+color: ${palette.mainWhite};
+} 
 `
 
 export const IngridientsList = styled.ul`

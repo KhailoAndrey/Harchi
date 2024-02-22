@@ -4,7 +4,7 @@ import { RiShareForwardLine } from 'react-icons/ri';
 import { HiOutlineTrash } from 'react-icons/hi2';
 import {
   Wrapper,
-    RecipeItem,
+  RecipeItem,
   HeaderBox,
   RecipeTitleWrapper,
   RecipeTitle,
@@ -12,6 +12,7 @@ import {
   IngridientsList,
   IngridientItem,
   Inner,
+  Icon,
 } from './SavedIngredients.styled';
 import { RxCross2 } from 'react-icons/rx';
 
@@ -75,7 +76,7 @@ const savedRecipes = [
     _id: '65b6c6e3e4ddd94fb81624a8',
     createdAt: '2024-01-28T21:28:03.453Z',
     updatedAt: '2024-01-28T21:28:03.453Z',
-    },
+  },
 ];
 
 const SavedIngredients = () => {
@@ -87,12 +88,22 @@ const SavedIngredients = () => {
             <HeaderBox>
               <RecipeTitleWrapper>
                 <RecipeTitle>{recipe.title}</RecipeTitle>
-                <GoArrowUpRight strokeWidth={1} size={20} style={{ cursor: 'pointer' }}/>
+                <GoArrowUpRight
+                  strokeWidth={1}
+                  size={20}
+                  style={{ cursor: 'pointer' }}
+                />
               </RecipeTitleWrapper>
               <IconsBlock>
-                <IoCopyOutline size={24} style={{ cursor: 'pointer' }} />
-                <RiShareForwardLine size={24} style={{ cursor: 'pointer' }} />
-                <HiOutlineTrash size={24} style={{ cursor: 'pointer' }} />
+                <Icon>
+                  <IoCopyOutline size={24} />
+                </Icon>
+                <Icon>
+                  <RiShareForwardLine size={24} />
+                </Icon>
+                <Icon>
+                  <HiOutlineTrash size={24} />
+                </Icon>
               </IconsBlock>
             </HeaderBox>
             <IngridientsList>
@@ -103,7 +114,7 @@ const SavedIngredients = () => {
                     <p>
                       {ingridient.quantity} {ingridient.measure}
                     </p>
-                    <RxCross2 size={20} style={{ cursor: 'pointer' }}/>
+                    <RxCross2 size={20} style={{ cursor: 'pointer' }} />
                   </Inner>
                 </IngridientItem>
               ))}

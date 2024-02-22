@@ -136,6 +136,4 @@ export interface IRecipe {
   category: string;
   cookTime: string;
   favorite: boolean;
-
-
 }

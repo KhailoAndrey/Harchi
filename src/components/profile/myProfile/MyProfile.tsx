@@ -18,7 +18,7 @@ import {
   SettingsItem,
   StatisticsItem,
   ListItem,
-} from './ExpertProfile.styled';
+} from './MyProfile.styled';
 import { MdAddAPhoto } from 'react-icons/md';
 import { RiPencilFill } from 'react-icons/ri';
 import { FaRegFaceSmile } from 'react-icons/fa6';
@@ -42,7 +42,7 @@ const expert: IExpert = {
     'Кулінарія - це вміння створювати із звичайних інгредієнтів щось неймовірно смачне',
 };
 
-const ExpertProfile = () => {
+const MyProfile = () => {
   return (
     <div>
       <Wrapper>
@@ -76,33 +76,34 @@ const ExpertProfile = () => {
         </Bio>
       </Wrapper>
       <ProfileInformation>
-      <div>
-        <ListTitle>Налаштування</ListTitle>
-        <ul>
-          <SettingsItem>
-            <HiOutlineLockOpen size={24} />
-            <p>Змінити пароль</p>
-          </SettingsItem>
-          <SettingsItem>
-            <HiOutlineTrash size={24} />
-            <p>Видалити фото профілю</p>
-          </SettingsItem>
-          <SettingsItem>
-            <TbLogout size={24} />
-            <p>Вийти з акаунта</p>
-          </SettingsItem>
-          <SettingsItem>
-            <LuUserX size={24} />
-            <p>Видалити аккаунт</p>
-          </SettingsItem>
-        </ul>
-      </div>
-      <div>
-        <ListTitle>Статистика</ListTitle>
-        <ul>
+        <div>
+          <ListTitle>Налаштування</ListTitle>
+          <ul>
+            <SettingsItem>
+              <HiOutlineLockOpen size={24} />
+              <p>Змінити пароль</p>
+            </SettingsItem>
+            <SettingsItem>
+              <HiOutlineTrash size={24} />
+              <p>Видалити фото профілю</p>
+            </SettingsItem>
+            <SettingsItem>
+              <TbLogout size={24} />
+              <p>Вийти з акаунта</p>
+            </SettingsItem>
+            <SettingsItem>
+              <LuUserX size={24} />
+              <p>Видалити аккаунт</p>
+            </SettingsItem>
+          </ul>
+        </div>
+        <div>
+          <ListTitle>Статистика</ListTitle>
+          <ul>
             <StatisticsItem>
               <p>Кількість рецептів</p>
-              <p>{expert.recipeAmount}</p></StatisticsItem>
+              <p>{expert.recipeAmount}</p>
+            </StatisticsItem>
             <StatisticsItem>
               <p>Кількість вподобань</p>
               <p>{expert.ratingAmount}</p>
@@ -110,50 +111,50 @@ const ExpertProfile = () => {
             <StatisticsItem>
               <p>Кількість коментарів під моїми рецептами</p>
               <p>246</p>
-          </StatisticsItem>
+            </StatisticsItem>
             <StatisticsItem>
               <p>Середня оцінка моїх рецептів</p>
               <p>{expert.rating}</p>
             </StatisticsItem>
-        </ul>
-      </div>
-      <div>
-        <ListTitle>Мої остнанні коментарі</ListTitle>
-        <ul>
-          <ListItem>
-            1. Текст коментаря
-            <GoArrowUpRight strokeWidth={1}/>
-          </ListItem>
-          <ListItem>
-            2. Текст коментаря
-            <GoArrowUpRight strokeWidth={1}/>
-          </ListItem>
-          <ListItem>
-            3. Текст коментаря
-            <GoArrowUpRight strokeWidth={1}/>
-          </ListItem>
-          <ListItem>
-            4. Текст коментаря
-            <GoArrowUpRight strokeWidth={1}/>
-          </ListItem>
-        </ul>
-      </div>
-      <div>
-        <ListTitle>Моя кулінарна книга</ListTitle>
-        <ul>
-          <ListItem>
-            Мої рецепти
-            <GoArrowUpRight strokeWidth={1}/>
-          </ListItem>
-          <ListItem>
-            Збережені рецепти
-            <GoArrowUpRight strokeWidth={1}/>
-          </ListItem>
-        </ul>
-      </div>
-</ProfileInformation>
+          </ul>
+        </div>
+        <div>
+          <ListTitle>Мої остнанні коментарі</ListTitle>
+          <ul>
+            <ListItem>
+              1. Текст коментаря
+              <GoArrowUpRight strokeWidth={1} />
+            </ListItem>
+            <ListItem>
+              2. Текст коментаря
+              <GoArrowUpRight strokeWidth={1} />
+            </ListItem>
+            <ListItem>
+              3. Текст коментаря
+              <GoArrowUpRight strokeWidth={1} />
+            </ListItem>
+            <ListItem>
+              4. Текст коментаря
+              <GoArrowUpRight strokeWidth={1} />
+            </ListItem>
+          </ul>
+        </div>
+        <div>
+          <ListTitle>Моя кулінарна книга</ListTitle>
+          <ul>
+            <ListItem>
+              Мої рецепти
+              <GoArrowUpRight strokeWidth={1} />
+            </ListItem>
+            <ListItem>
+              Збережені рецепти
+              <GoArrowUpRight strokeWidth={1} />
+            </ListItem>
+          </ul>
+        </div>
+      </ProfileInformation>
     </div>
   );
 };
 
-export default ExpertProfile;
+export default MyProfile;

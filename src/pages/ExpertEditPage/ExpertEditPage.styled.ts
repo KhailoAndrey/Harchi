@@ -6,10 +6,9 @@ export const Wrapper = styled.div`
   width: 1440px;
   padding: 0 80px;
 `
-export const Inner = styled.div`
-display:flex;
-gap:8px;
-margin-bottom:33px;
+
+export const SavedIngredientsWrapper = styled.div`
+margin-bottom:80px;
 `
 
 export const Title = styled.h1`
@@ -19,6 +18,11 @@ font-size: 36px;
 font-weight: 700;
 line-height: 1.3;
 color: ${palette.orange}
+`
+export const Inner = styled.div`
+display:flex;
+gap:8px;
+margin-bottom:33px;
 `
 
 export const SavedIngredientsTitle = styled.p`

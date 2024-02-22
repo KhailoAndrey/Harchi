@@ -13,6 +13,8 @@ import {
   Button,
   OwnerPhoto,
   Div,
+  ImgWrapper,
+  IconsBox,
 } from './cardOfRecipes.styled';
 import {
   GoClock,
@@ -26,6 +28,9 @@ import { useEffect, useState } from 'react';
 import { ICard } from '@/types';
 import { DIFFICULTY_LEVEL } from '@/constants';
 import { palette } from '@/constants/colors';
+import { TbPencilMinus } from 'react-icons/tb';
+import { HiOutlineTrash } from 'react-icons/hi2';
+
 interface ICardRecipes {
   cards: ICard[];
 }
@@ -98,9 +103,23 @@ function CardRecipes({ cards }: ICardRecipes) {
           ownerPhoto,
         }) => (
           <Item key={id}>
-            <Link>
-              <Photo src={`./cuisinePhoto/${photo}`} />
-            </Link>
+            <ImgWrapper>
+              <Link>
+                <Photo src={`./cuisinePhoto/${photo}`} />
+              </Link>
+              <IconsBox>
+                <TbPencilMinus
+                  size={16}
+                  style={{ cursor: 'pointer' }}
+                  color={palette.mainWhite}
+                />
+                <HiOutlineTrash
+                  size={16}
+                  style={{ cursor: 'pointer' }}
+                  color={palette.mainWhite}
+                />
+              </IconsBox>
+            </ImgWrapper>
             <Title>{title}</Title>
             <Describe>{describe}</Describe>
             <InfoCont>
