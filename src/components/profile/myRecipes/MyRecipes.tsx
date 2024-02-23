@@ -12,7 +12,7 @@ const MyRecipes = () => {
         <Title>Moї рецепти</Title>
       </TitleWrapper>
       <RecipesList>
-        <CardRecipes cards={recipes} />
+        <CardRecipes cards={recipes} areControlBtnsShowed={true} />
       </RecipesList>
     </div>
   );

@@ -35,7 +35,7 @@ interface ICardRecipes {
   cards: ICard[];
 }
 
-function CardRecipes({ cards }: ICardRecipes) {
+function CardRecipes({ cards, areControlBtnsShowed }: ICardRecipes & { areControlBtnsShowed?: boolean }) {
   const [recipes, setRecipes] = useState<ICard[]>([]);
 
   const handleFavorite = (id: number) => {
@@ -107,7 +107,7 @@ function CardRecipes({ cards }: ICardRecipes) {
               <Link>
                 <Photo src={`./cuisinePhoto/${photo}`} />
               </Link>
-              <IconsBox>
+              {areControlBtnsShowed && (<IconsBox>
                 <TbPencilMinus
                   size={16}
                   style={{ cursor: 'pointer' }}
@@ -118,7 +118,7 @@ function CardRecipes({ cards }: ICardRecipes) {
                   style={{ cursor: 'pointer' }}
                   color={palette.mainWhite}
                 />
-              </IconsBox>
+              </IconsBox>)}
             </ImgWrapper>
             <Title>{title}</Title>
             <Describe>{describe}</Describe>
