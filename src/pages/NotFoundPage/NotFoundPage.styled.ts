@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import bg_d_1x from '../../../public/404/404_desk_1x.png';
-import zero from '../../../public/404/zero.png';
+import bg_d_1x from '/src/assets/images/404/404_desk_1x.png';
+import zero from '/src/assets/images/404/zero.png';
 import { palette } from '@/constants/colors';
 import { Link } from 'react-router-dom';
 
