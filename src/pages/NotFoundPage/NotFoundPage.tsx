@@ -10,7 +10,7 @@ import {
   Wrapper,
   Zero,
 } from './NotFoundPage.styled';
-import animationGif from './Animation.gif';
+import animationGif from '@/assets/images/404/Animation.gif';
 
 const NotFoundPage = () => {
   return (
