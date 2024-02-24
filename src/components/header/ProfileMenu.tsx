@@ -3,6 +3,8 @@ import SearchBar from '../searchbar/Searchbar';
 import { useDebounce } from '@/hooks/useDebouce';
 import { SiCodechef } from 'react-icons/si';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import { palette } from '@/constants/colors';
 
 function ProfileMenu() {
   const [value, setValue] = useState<string>('');
@@ -23,7 +25,9 @@ function ProfileMenu() {
         placeholder="Пошук"
         fullWidth
       />
-      <SiCodechef size={48}/>
+      <ProfileLink to={'/experts/edit'}>
+        <SiCodechef size={48}/>
+      </ProfileLink>
     </Wrapper>
   );
 }
@@ -32,6 +36,13 @@ const Wrapper = styled('div')`
   display: flex;
   gap: 12px;
   align-items: center;
+`;
+
+const ProfileLink = styled(Link)`
+color:${palette.mainBlack};
+&:hover{
+  color:${palette.red};
+}
 `;
 
 export default ProfileMenu;

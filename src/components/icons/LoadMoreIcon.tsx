@@ -1,3 +1,4 @@
+import { palette } from '@/constants/colors';
 import { IoIosArrowDown } from 'react-icons/io';
 
 const LoadMore = () => {
@@ -6,16 +7,16 @@ const LoadMore = () => {
       <svg width="0" height="0">
         <linearGradient
           id="gradient"
-          x1="24.9675"
-          y1="21.3096"
-          x2="26.8833"
-          y2="32.2203"
-          gradientUnits="userSpaceOnUse"
+          x1="0%"
+          y1="0%"
+          x2="100%"
+          y2="100%"
         >
-          <stop offset="0.385" stopColor="#EA6500" />
-          <stop offset="0.965" stopColor="#FFCE20" />
+          <stop offset="0.285" stopColor={palette.orange} />
+          <stop offset="0.865" stopColor={palette.yellow} />
         </linearGradient>
       </svg>
+      <svg width="0" height="0" />
       <IoIosArrowDown size={48} style={{ fill: 'url(#gradient)' }} />
     </>
   );

@@ -1,6 +1,6 @@
 import { IoIosArrowDown } from 'react-icons/io';
 import { SelectItem } from './SelectCuisine.styled';
-import { Block, IconWrapper, Option } from '../../../components/selectMenu/Select.styled';
+import { Block, IconWrapper, Option } from '../Select.styled';
 import { useMemo } from 'react';
 import { CuisineEnum } from '@/types';
 

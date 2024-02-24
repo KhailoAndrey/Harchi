@@ -48,4 +48,5 @@ gap: 24px;
 export const LoadMoreIcon = styled.div`
 display: flex;
 justify-content: center;
+cursor: pointer;
 `;

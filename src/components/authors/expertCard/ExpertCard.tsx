@@ -26,7 +26,7 @@ const ExpertCard = ({
         <InfoBlock>
           <RecipesAmount>Кіл. рецептів: {recipeAmount}</RecipesAmount>
           <RatingBlock>
-            <FaRegFaceSmile size={24}></FaRegFaceSmile>
+            <FaRegFaceSmile size={24} />
             <Rating>
               {rating} ({ratingAmount} оцінок)
             </Rating>

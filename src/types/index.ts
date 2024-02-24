@@ -99,6 +99,7 @@ export interface IOption {
 
 export interface IExpert {
   id: number;
+  email:string,
   photo: string;
   profession: string;
   recipeAmount: number;
