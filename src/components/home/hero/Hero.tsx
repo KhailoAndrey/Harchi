@@ -1,5 +1,7 @@
-import InfoContainer from '../infoContainer/InfoContainer';
+import { lazy } from 'react';
 import { InitialPropsHero } from '../../../helpers/swiperSlides/initialSwiperMainPage';
+
+const InfoContainer = lazy(()=> import('../infoContainer/InfoContainer'));
 
 function Hero() {
   return (

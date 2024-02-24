@@ -4,7 +4,9 @@ import { lazy } from 'react';
 const Layout = lazy(() => import('./components/layout/Layout'));
 const MainPage = lazy(() => import('./pages/MainPage/MainPage'));
 const RecipePage = lazy(() => import('./pages/RecipePage/RecipePage'));
-const RecipeCategoryPage = lazy(() => import('./pages/RecipeCategoryPage/RecipeCategoryPage'));
+const RecipeCategoryPage = lazy(
+  () => import('./pages/RecipeCategoryPage/RecipeCategoryPage')
+);
 const ExpertsPage = lazy(() => import('./pages/ExpertsPage/ExpertsPage'));
 const ExpertProfilePage = lazy(() => import('./pages/ExpertProfilePage/ExpertProfilePage'));
 const ExpertEditPage = lazy(() => import('./pages/ExpertEditPage/ExpertEditPage'));
