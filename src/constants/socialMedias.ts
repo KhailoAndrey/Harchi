@@ -3,13 +3,7 @@ import { FaTelegramPlane } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { FaWhatsapp } from 'react-icons/fa6';
 import { MdOutlineAlternateEmail } from 'react-icons/md';
-import {
-  EmailShareButton,
-  FacebookShareButton,
-  TelegramShareButton,
-  TwitterShareButton,
-  WhatsappShareButton,
-} from 'react-share';
+import { EmailShareButton, FacebookShareButton, TelegramShareButton, TwitterShareButton, WhatsappShareButton } from 'react-share';
 
 export const socialMedias = [
     {

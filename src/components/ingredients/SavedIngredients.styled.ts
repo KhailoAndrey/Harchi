@@ -53,7 +53,7 @@ export const Icon = styled.div`
 `;
 
 export const CopyIcon = styled.div`
-  position:relative;
+  position: relative;
 `;
 
 export const CopyMessage = styled.div`
@@ -61,7 +61,7 @@ export const CopyMessage = styled.div`
   top: 26px;
   right: 50%;
   transform: translateX(50%);
-  white-space:nowrap;
+  white-space: nowrap;
   padding: 6px;
   font-size: 12px;
   border-radius: 4px;

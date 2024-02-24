@@ -25,7 +25,7 @@ const ExpertBio = () => {
         <InfoBlock>
           <RecipesAmount>Кіл. рецептів: {expert.recipeAmount}</RecipesAmount>
         <RatingBlock>
-            <FaRegFaceSmile size={24}></FaRegFaceSmile>
+            <FaRegFaceSmile size={24} />
             <Rating>
               {expert.rating} ({expert.ratingAmount} оцінок)
             </Rating>

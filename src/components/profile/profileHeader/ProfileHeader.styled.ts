@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   display: flex;
   gap: 24px;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 80px;
 `;
 
@@ -40,12 +40,14 @@ export const ExpertImg = styled.img`
   object-fit: cover;
   object-position: center;
 `;
+
 export const Bio = styled.div`
   display: flex;
   flex-direction: column;
   gap: 25px;
   font-family: 'El Messiri';
 `;
+
 export const InfoWrapper = styled.div`
   width: 264px;
   display: flex;
@@ -104,7 +106,7 @@ export const Rating = styled.p`
 
 export const Textarea = styled.textarea`
   width: 500px;
-  min-height: 100px;
+  min-height: 80px;
   padding: 16px;
   border-radius: 4px;
   font-family: 'El Messiri';

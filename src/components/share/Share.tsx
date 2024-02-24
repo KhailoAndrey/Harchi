@@ -11,7 +11,17 @@ import {
 import { useEffect } from 'react';
 import { socialMedias } from '@/constants/socialMedias';
 
-const Share = ({ changeVisibility, isVisible, ingridients }) => {
+type ShareProps = {
+  changeVisibility: () => void;
+  isVisible: boolean;
+  ingridients: {
+    product: string;
+    quantity: number;
+    measure: string;
+  }[];
+};
+
+const Share = ({ changeVisibility, isVisible, ingridients }: ShareProps) => {
   const shareInfo = ingridients
     .map(
       ingridient =>

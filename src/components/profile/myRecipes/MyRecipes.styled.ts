@@ -19,3 +19,9 @@ export const RecipesList = styled.ul`
   flex-wrap: wrap;
   gap: 24px;
 `;
+
+export const LoadMoreBtn = styled.div`
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+`;

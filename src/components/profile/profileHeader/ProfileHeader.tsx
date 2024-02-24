@@ -34,6 +34,7 @@ const ProfileHeader = ({ expert }: ProfileHeaderProps) => {
   const [email, setEmail] = useState(expert.email);
   const [description, setDescription] = useState(expert.description);
   const [editingField, setEditingField] = useState<string | null>(null);
+  const [photo, setPhoto] = useState<string | null>(expert.photo);
 
   const handleEditClick = (
     field: string,
@@ -66,6 +67,20 @@ const ProfileHeader = ({ expert }: ProfileHeaderProps) => {
     }
   };
 
+  const handleFileInputChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const dataUrl = reader.result as string;
+        setPhoto(dataUrl);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
@@ -86,15 +101,19 @@ const ProfileHeader = ({ expert }: ProfileHeaderProps) => {
   return (
     <Wrapper>
       <ImgWrapper>
-        <ExpertImg src={expert.photo} />
-          <FileInputLabel htmlFor="fileInput">
-            <MdAddAPhoto
-              size={17}
-              fill={palette.mainWhite}
-              style={{ cursor: 'pointer' }}
-            />
-          </FileInputLabel>
-          <FileInput id="fileInput" type="file" />
+        <ExpertImg src={photo || expert.photo} />
+        <FileInputLabel htmlFor="fileInput">
+          <MdAddAPhoto
+            size={17}
+            fill={palette.mainWhite}
+            style={{ cursor: 'pointer' }}
+          />
+        </FileInputLabel>
+        <FileInput
+          id="fileInput"
+          type="file"
+          onChange={handleFileInputChange}
+        />
       </ImgWrapper>
       <Bio>
         <InfoWrapper>

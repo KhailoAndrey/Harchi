@@ -16,7 +16,7 @@ type ProfileDashboardProps = {
   expert: IExpert;
 };
 
-const ProfileDashboard = ({expert}:ProfileDashboardProps) => {
+const ProfileDashboard = ({ expert }: ProfileDashboardProps) => {
   return (
     <ProfileInformation>
       <div>

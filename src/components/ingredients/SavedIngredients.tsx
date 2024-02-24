@@ -19,69 +19,7 @@ import {
 import { RxCross2 } from 'react-icons/rx';
 import { useState } from 'react';
 import Share from '../share/Share';
-
-const savedRecipes = [
-  {
-    title: 'Тірамісу — класичний рецепт',
-    description: 'Ніжний італійський десерт',
-    mainPhotoURL:
-      'https://res.cloudinary.com/ddxwmrbxq/image/upload/v1706477275/harchi/mnxo3m2hgfv5efwpjfkk.jpg',
-    category: 'Десерт',
-    cuisine: 'Італійська',
-    difficulty: 'Легко',
-    cookTime: '1 год',
-    portions: 5,
-    ingridients: [
-      {
-        categoryIngr: '',
-        product: 'Сир маскарпоне',
-        quantity: 250,
-        measure: 'грам',
-        _id: '123m',
-      },
-      {
-        categoryIngr: '',
-        product: 'Вершки (33%)',
-        quantity: 250,
-        measure: 'мл',
-        _id: '564f',
-      },
-      {
-        categoryIngr: '',
-        product: 'Печиво Савоярді',
-        quantity: 20,
-        measure: 'шт',
-        _id: '656y',
-      },
-      {
-        categoryIngr: '',
-        product: 'Цукрова пудра',
-        quantity: 120,
-        measure: 'грам',
-        _id: '946n',
-      },
-      {
-        categoryIngr: '',
-        product: 'Мигдальний лікер “Амаретто”',
-        quantity: 3,
-        measure: 'с.л.',
-        _id: '574a',
-      },
-      {
-        categoryIngr: '',
-        product: 'Кава еспресо',
-        quantity: 200,
-        measure: 'мл',
-        _id: '754h',
-      },
-    ],
-    favorite: false,
-    owner: '65a2d2fa4b26b90c3078f170',
-    _id: '65b6c6e3e4ddd94fb81624a8',
-    createdAt: '2024-01-28T21:28:03.453Z',
-    updatedAt: '2024-01-28T21:28:03.453Z',
-  },
-];
+import savedRecipes from '../../helpers/recipes/savedRecipes.json';
 
 const SavedIngredients = () => {
   const [isVisible, setIsVisible] = useState(false);

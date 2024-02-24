@@ -9,7 +9,7 @@ const Sorting = ({list}:SortingProps) => {
   return (
          <SortingBlock>
           <IconWrapper>
-            <IoIosArrowDown size={30}></IoIosArrowDown>
+            <IoIosArrowDown size={30} />
           </IconWrapper>
           <SortingList>{
               list.map((select, index) => (

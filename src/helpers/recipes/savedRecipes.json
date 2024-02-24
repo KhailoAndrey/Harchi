@@ -1,0 +1,44 @@
+[
+  {
+    "_id":1,
+    "title": "Тірамісу — класичний рецепт",
+    "ingridients": [
+      {
+        "product": "Сир маскарпоне",
+        "quantity": 250,
+        "measure": "грам",
+        "_id": "123m"
+      },
+      {
+        "product": "Вершки (33%)",
+        "quantity": 250,
+        "measure": "мл",
+        "_id": "564f"
+      },
+      {
+        "product": "Печиво Савоярді",
+        "quantity": 20,
+        "measure": "шт",
+        "_id": "656y"
+      },
+      {
+        "product": "Цукрова пудра",
+        "quantity": 120,
+        "measure": "грам",
+        "_id": "946n"
+      },
+      {
+        "product": "Мигдальний лікер “Амаретто”",
+        "quantity": 3,
+        "measure": "с.л.",
+        "_id": "574a"
+      },
+      {
+        "product": "Кава еспресо",
+        "quantity": 200,
+        "measure": "мл",
+        "_id": "754h"
+      }
+    ]
+  }
+]
