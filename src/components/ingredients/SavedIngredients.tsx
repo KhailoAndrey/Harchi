@@ -12,9 +12,13 @@ import {
   IngridientsList,
   IngridientItem,
   Inner,
+  CopyIcon,
   Icon,
+  CopyMessage,
 } from './SavedIngredients.styled';
 import { RxCross2 } from 'react-icons/rx';
+import { useState } from 'react';
+import Share from '../share/Share';
 
 const savedRecipes = [
   {
@@ -80,6 +84,29 @@ const savedRecipes = [
 ];
 
 const SavedIngredients = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const changeVisibility = () => {
+    setIsVisible(!isVisible);
+  };
+
+  const copyToClipboard = (ingredientText: string) => {
+    navigator.clipboard
+      .writeText(ingredientText)
+      .then(() => {
+        const message: HTMLElement | null = document.getElementById('message');
+        if (message !== null) {
+          message.removeAttribute('hidden');
+          setTimeout(() => {
+            message.setAttribute('hidden', 'true');
+          }, 500);
+        }
+      })
+      .catch(error => {
+        console.error('Не вдалося скопіювати текст: ', error);
+      });
+  };
+
   return (
     <Wrapper>
       <ul>
@@ -95,11 +122,29 @@ const SavedIngredients = () => {
                 />
               </RecipeTitleWrapper>
               <IconsBlock>
+                <CopyIcon>
+                  <Icon>
+                    <IoCopyOutline
+                      size={24}
+                      onClick={() =>
+                        copyToClipboard(
+                          recipe.ingridients
+                            .map(
+                              ingridient =>
+                                `${ingridient.product}: ${ingridient.quantity} ${ingridient.measure}`
+                            )
+                            .join('\n')
+                        )
+                      }
+                      style={{ cursor: 'pointer' }}
+                    />
+                  </Icon>
+                  <CopyMessage id="message" hidden>
+                    Скопійовано!
+                  </CopyMessage>
+                </CopyIcon>
                 <Icon>
-                  <IoCopyOutline size={24} />
-                </Icon>
-                <Icon>
-                  <RiShareForwardLine size={24} />
+                  <RiShareForwardLine size={24} onClick={changeVisibility} />
                 </Icon>
                 <Icon>
                   <HiOutlineTrash size={24} />
@@ -119,6 +164,13 @@ const SavedIngredients = () => {
                 </IngridientItem>
               ))}
             </IngridientsList>
+            {isVisible && (
+              <Share
+                changeVisibility={changeVisibility}
+                isVisible={isVisible}
+                ingridients={recipe.ingridients}
+              />
+            )}
           </RecipeItem>
         ))}
       </ul>

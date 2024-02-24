@@ -52,6 +52,24 @@ export const Icon = styled.div`
   }
 `;
 
+export const CopyIcon = styled.div`
+  position:relative;
+`;
+
+export const CopyMessage = styled.div`
+  position: absolute;
+  top: 26px;
+  right: 50%;
+  transform: translateX(50%);
+  white-space:nowrap;
+  padding: 6px;
+  font-size: 12px;
+  border-radius: 4px;
+  background-color: ${palette.mainBlack};
+  color: ${palette.mainWhite};
+  opacity: 0.5;
+`;
+
 export const IngridientsList = styled.ul`
   width: 954px;
   display: flex;

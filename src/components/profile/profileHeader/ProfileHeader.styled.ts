@@ -12,20 +12,6 @@ export const ImgWrapper = styled.div`
   position: relative;
 `;
 
-// export const IconWrapper = styled.div`
-//   position: absolute;
-//   bottom: 0;
-//   right: 25px;
-//   width: 36px;
-//   height: 36px;
-//   border-radius: 50%;
-//   background-color: ${palette.orange};
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   cursor: pointer;
-// `;
-
 export const FileInputLabel = styled.label`
   position: absolute;
   bottom: 0;
