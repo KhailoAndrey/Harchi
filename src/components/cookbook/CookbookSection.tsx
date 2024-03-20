@@ -1,11 +1,22 @@
 import Sorting from '../sorting/Sorting';
 import { EXPERT_RESIPES_SORTING } from '@/constants/expertsRecipesSorting';
 import { SectionLink, SectionList, SectionWrapper } from './CookbookSection.styled';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import { ReactNode, useEffect } from 'react';
 
+type CookbookSectionProps = {
+  children: ReactNode;
+}
 
-const CookbookSection = ({ children }) => {
+const CookbookSection = ({ children }:CookbookSectionProps) => {
   const { section } = useParams();
+    const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!section) {
+      navigate('myRecipes');
+    }
+  }, []);
 
   return (
     <div>

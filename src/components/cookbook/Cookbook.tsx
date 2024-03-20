@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import SavedIngredients from '../ingredients/SavedIngredients';
 import CardRecipes from '@/helpers/cardOfRecipes/cardRecipes';
 import recipes from '../../../src/helpers/recipes/recipes.json';
-import { CategoryTitle, LoadMoreBtn, RecipesList } from './Cookbook.styled';
+import { CategoryTitle, CookBookText, LoadMoreBtn, RecipeSection, RecipesList, RedirectButtonWrapper, SavedIngredientsWrapper } from './Cookbook.styled';
 import RedirectButton from '@/helpers/buttons/RedirectButton';
 import { gradient, palette } from '@/constants/colors';
 import { useEffect, useState } from 'react';
@@ -16,6 +16,7 @@ const Cookbook = () => {
 
   const categorizedData = recipes.reduce((acc, recipe) => {
     const category = recipe.category;
+    console.log(acc);
     if (!acc[category]) {
       acc[category] = [];
     }
@@ -63,21 +64,34 @@ const Cookbook = () => {
     <div>
       {section === 'myRecipes' && (
         <div>
-          {visibleCategories.map(category => (
-            <div key={category}>
-              <CategoryTitle>{category}</CategoryTitle>
-              <RecipesList>
-                <CardRecipes key={category} cards={categorizedData[category]} />
-              </RecipesList>
-              <RedirectButton
-                path={'/'}
-                isModal={false}
-                text={'Дивитись більше'}
-                backgroundcolor={gradient.red2}
-                textcolor={palette.mainWhite}
-              ></RedirectButton>
-            </div>
-          ))}
+          {visibleCategories ? (
+            visibleCategories.map(category => (
+              <RecipeSection key={category}>
+                <CategoryTitle>{category}</CategoryTitle>
+                <RecipesList>
+                  <CardRecipes
+                    key={category}
+                    cards={categorizedData[category]}
+                  />
+                </RecipesList>
+                <RedirectButtonWrapper>
+                   <RedirectButton
+                  path={'/'}
+                  isModal={false}
+                  text={'Дивитись більше'}
+                  backgroundcolor={gradient.red2}
+                  textcolor={palette.mainWhite}
+                ></RedirectButton>
+               </RedirectButtonWrapper>
+              </RecipeSection>
+            ))
+          ) : (
+            <CookBookText>
+              Ваші кулінарні таланти можуть стати особливою родзинкою нашого
+              порталу, поділіться своїм першим рецептом з нами!
+              <button>Додати рецепт</button>
+            </CookBookText>
+          )}
           {categories.length >= 2 &&
             categories.length !== visibleCategories.length && (
               <LoadMoreBtn onClick={loadMoreCategories}>
@@ -88,21 +102,36 @@ const Cookbook = () => {
       )}
       {section === 'savedRecipes' && (
         <div>
-          {visibleCategories.map(category => (
-            <div key={category}>
-              <CategoryTitle>{category}</CategoryTitle>
-              <RecipesList>
-                <CardRecipes key={category} cards={categorizedData[category]} />
-              </RecipesList>
-              <RedirectButton
-                path={'/'}
-                isModal={false}
-                text={'Дивитись більше'}
-                backgroundcolor={gradient.red2}
-                textcolor={palette.mainWhite}
-              ></RedirectButton>
+          {visibleCategories ? (
+            visibleCategories.map(category => (
+              <RecipeSection key={category}>
+                <CategoryTitle>{category}</CategoryTitle>
+                <RecipesList>
+                  <CardRecipes
+                    key={category}
+                    cards={categorizedData[category]}
+                  />
+                </RecipesList>
+                <RedirectButtonWrapper>
+                   <RedirectButton
+                  path={'/'}
+                  isModal={false}
+                  text={'Дивитись більше'}
+                  backgroundcolor={gradient.red2}
+                  textcolor={palette.mainWhite}
+                ></RedirectButton>
+               </RedirectButtonWrapper>
+              </RecipeSection>
+            ))
+          ) : (
+            <div>
+              <CookBookText>
+                Ми впевнені, що саме тут ви знайдете найцінніші смакові скарби
+                та наповните свою кулінарну книгу новими смачними рецептами
+              </CookBookText>
+              <button>Підібрати рецепт</button>
             </div>
-          ))}
+          )}
           {categories.length >= 2 &&
             categories.length !== visibleCategories.length && (
               <LoadMoreBtn onClick={loadMoreCategories}>
@@ -111,7 +140,11 @@ const Cookbook = () => {
             )}
         </div>
       )}
-      {section === 'savedIngredients' && <SavedIngredients />}
+      {section === 'savedIngredients' && (
+        <SavedIngredientsWrapper>
+          <SavedIngredients />
+        </SavedIngredientsWrapper>
+      )}
     </div>
   );
 };
