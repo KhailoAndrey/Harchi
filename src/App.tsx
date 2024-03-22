@@ -18,7 +18,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        {/* <Route path="/" element={<Layout />}> */}
           <Route index element={<MainPage />} />
           <Route path="all_recipes" element={<RecipePage />} />
           <Route path="all_recipes/:categoryName" element={<RecipeCategoryPage />} />
@@ -29,7 +29,7 @@ function App() {
             <Route path=":section" element={<Cookbook />} />
           </Route>
           <Route path="*" element={<NotFoundPage />} />
-        </Route>
+        {/* </Route> */}
       </Routes>
     </>
   );

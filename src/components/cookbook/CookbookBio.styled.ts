@@ -3,23 +3,36 @@ import { palette } from '@/constants/colors';
 
 export const BioWrapper = styled.div`
 display:flex;
+flex-direction: column;
 gap: 24px;
 margin-bottom: 38px;
+
+@media screen and (min-width: 768px) {
+flex-direction: row;
+}
 `
 
 export const CookbookImg = styled.img`
+width: 358px;
+height: 199px;
+border-radius: 8px;
+@media screen and (min-width: 768px) {
 width: 302px;
 height: 220px;
-border-radius: 8px;
+}
 `;
 
 export const CookbookTitle = styled.h2`
 margin-bottom: 24px;
 font-family: "KyivType Sans";
-font-size: 36px;
+font-size: 24px;
 font-weight: 700;
 line-height: 130%;
 color: ${palette.red};
+
+@media screen and (min-width: 768px) {
+font-size: 36px;
+}
 `;
 
 export const RecipesAmount = styled.p`

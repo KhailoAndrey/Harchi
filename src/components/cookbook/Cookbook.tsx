@@ -4,25 +4,40 @@ import { useParams } from 'react-router-dom';
 import SavedIngredients from '../ingredients/SavedIngredients';
 import CardRecipes from '@/helpers/cardOfRecipes/cardRecipes';
 import recipes from '../../../src/helpers/recipes/recipes.json';
-import { CategoryTitle, CookBookText, LoadMoreBtn, RecipeSection, RecipesList, RedirectButtonWrapper, SavedIngredientsWrapper } from './Cookbook.styled';
+import {
+  AddBtn,
+  CategoryTitle,
+  CookBookText,
+  CookBookTextWrapper,
+  LoadMoreBtn,
+  RecipeSection,
+  RecipesList,
+  RedirectButtonWrapper,
+  SavedIngredientsWrapper,
+} from './Cookbook.styled';
 import RedirectButton from '@/helpers/buttons/RedirectButton';
 import { gradient, palette } from '@/constants/colors';
 import { useEffect, useState } from 'react';
 import LoadMore from '../icons/LoadMoreIcon';
+import { ICard } from '@/types';
+import { IoIosAddCircleOutline } from 'react-icons/io';
+
+type CategorizedData = {
+  [category: string]: ICard[];
+};
 
 const Cookbook = () => {
   const { section } = useParams();
-  const [categories, setCategories] = useState([]);
+  const [categories, setCategories] = useState<string[]>([]);
 
-  const categorizedData = recipes.reduce((acc, recipe) => {
+  const categorizedData: CategorizedData = recipes.length > 0 ? recipes.reduce((acc, recipe) => {
     const category = recipe.category;
-    console.log(acc);
     if (!acc[category]) {
       acc[category] = [];
     }
     acc[category].push(recipe);
     return acc;
-  }, {});
+  }, {} as CategorizedData) : {};
 
   useEffect(() => {
     setCategories(Object.keys(categorizedData));
@@ -64,7 +79,7 @@ const Cookbook = () => {
     <div>
       {section === 'myRecipes' && (
         <div>
-          {visibleCategories ? (
+          {recipes.length !== 0 ? (
             visibleCategories.map(category => (
               <RecipeSection key={category}>
                 <CategoryTitle>{category}</CategoryTitle>
@@ -72,25 +87,30 @@ const Cookbook = () => {
                   <CardRecipes
                     key={category}
                     cards={categorizedData[category]}
+                    areControlBtnsShowed={true}
                   />
                 </RecipesList>
                 <RedirectButtonWrapper>
-                   <RedirectButton
-                  path={'/'}
-                  isModal={false}
-                  text={'Дивитись більше'}
-                  backgroundcolor={gradient.red2}
-                  textcolor={palette.mainWhite}
-                ></RedirectButton>
-               </RedirectButtonWrapper>
+                  <RedirectButton
+                    path={'/all_recipes'}
+                    isModal={false}
+                    text={'Дивитись більше'}
+                    backgroundcolor={gradient.red2}
+                    textcolor={palette.mainWhite}
+                  ></RedirectButton>
+                </RedirectButtonWrapper>
               </RecipeSection>
             ))
           ) : (
-            <CookBookText>
-              Ваші кулінарні таланти можуть стати особливою родзинкою нашого
-              порталу, поділіться своїм першим рецептом з нами!
-              <button>Додати рецепт</button>
-            </CookBookText>
+            <CookBookTextWrapper>
+              <CookBookText>
+                Ваші кулінарні таланти можуть стати особливою родзинкою нашого
+                порталу, поділіться своїм першим рецептом з нами!
+              </CookBookText>
+              <AddBtn $backgroundcolor={gradient.red2}>
+                Додати рецепт <IoIosAddCircleOutline />
+              </AddBtn>
+            </CookBookTextWrapper>
           )}
           {categories.length >= 2 &&
             categories.length !== visibleCategories.length && (
@@ -102,7 +122,7 @@ const Cookbook = () => {
       )}
       {section === 'savedRecipes' && (
         <div>
-          {visibleCategories ? (
+          {recipes.length !== 0 ? (
             visibleCategories.map(category => (
               <RecipeSection key={category}>
                 <CategoryTitle>{category}</CategoryTitle>
@@ -113,24 +133,26 @@ const Cookbook = () => {
                   />
                 </RecipesList>
                 <RedirectButtonWrapper>
-                   <RedirectButton
-                  path={'/'}
-                  isModal={false}
-                  text={'Дивитись більше'}
-                  backgroundcolor={gradient.red2}
-                  textcolor={palette.mainWhite}
-                ></RedirectButton>
-               </RedirectButtonWrapper>
+                  <RedirectButton
+                    path={'/all_recipes'}
+                    isModal={false}
+                    text={'Дивитись більше'}
+                    backgroundcolor={gradient.red2}
+                    textcolor={palette.mainWhite}
+                  ></RedirectButton>
+                </RedirectButtonWrapper>
               </RecipeSection>
             ))
           ) : (
-            <div>
+            <CookBookTextWrapper>
               <CookBookText>
                 Ми впевнені, що саме тут ви знайдете найцінніші смакові скарби
                 та наповните свою кулінарну книгу новими смачними рецептами
               </CookBookText>
-              <button>Підібрати рецепт</button>
-            </div>
+              <AddBtn $backgroundcolor={gradient.red2}>
+                Додати рецепт <IoIosAddCircleOutline />
+              </AddBtn>
+            </CookBookTextWrapper>
           )}
           {categories.length >= 2 &&
             categories.length !== visibleCategories.length && (
