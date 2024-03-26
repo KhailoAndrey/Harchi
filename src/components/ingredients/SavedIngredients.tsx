@@ -15,14 +15,20 @@ import {
   CopyIcon,
   Icon,
   CopyMessage,
+  CrossIcon,
 } from './SavedIngredients.styled';
 import { RxCross2 } from 'react-icons/rx';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Share from '../share/Share';
 import savedRecipes from '../../helpers/recipes/savedRecipes.json';
 
 const SavedIngredients = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const handleChangedSize = () => {
+    setWindowWidth(window.innerWidth);
+  };
 
   const changeVisibility = () => {
     setIsVisible(!isVisible);
@@ -45,25 +51,33 @@ const SavedIngredients = () => {
       });
   };
 
+  useEffect(() => {
+    window.addEventListener('resize', handleChangedSize);
+    return () => {
+      window.removeEventListener('resize', handleChangedSize);
+    };
+  }, []);
+
   return (
     <Wrapper>
       <ul>
         {savedRecipes.map(recipe => (
           <RecipeItem key={recipe._id}>
             <HeaderBox>
-              <RecipeTitleWrapper>
-                <RecipeTitle>{recipe.title}</RecipeTitle>
-                <GoArrowUpRight
-                  strokeWidth={1}
-                  size={20}
-                  style={{ cursor: 'pointer' }}
-                />
-              </RecipeTitleWrapper>
+              {windowWidth >= 768 && (
+                <RecipeTitleWrapper>
+                  <RecipeTitle>{recipe.title}</RecipeTitle>
+                  <GoArrowUpRight
+                    strokeWidth={1}
+                    size={20}
+                    style={{ cursor: 'pointer' }}
+                  />
+                </RecipeTitleWrapper>
+              )}
               <IconsBlock>
                 <CopyIcon>
                   <Icon>
                     <IoCopyOutline
-                      size={24}
                       onClick={() =>
                         copyToClipboard(
                           recipe.ingridients
@@ -74,6 +88,7 @@ const SavedIngredients = () => {
                             .join('\n')
                         )
                       }
+                      size={24}
                       style={{ cursor: 'pointer' }}
                     />
                   </Icon>
@@ -82,13 +97,23 @@ const SavedIngredients = () => {
                   </CopyMessage>
                 </CopyIcon>
                 <Icon>
-                  <RiShareForwardLine size={24} onClick={changeVisibility} />
+                  <RiShareForwardLine onClick={changeVisibility} size={24}/>
                 </Icon>
                 <Icon>
-                  <HiOutlineTrash size={24} />
+                  <HiOutlineTrash size={24}/>
                 </Icon>
               </IconsBlock>
             </HeaderBox>
+            {windowWidth < 768 && (
+              <RecipeTitleWrapper>
+                <RecipeTitle>{recipe.title}</RecipeTitle>
+                <GoArrowUpRight
+                  strokeWidth={1}
+                  size={20}
+                  style={{ cursor: 'pointer' }}
+                />
+              </RecipeTitleWrapper>
+            )}
             <IngridientsList>
               {recipe.ingridients.map(ingridient => (
                 <IngridientItem key={ingridient._id}>
@@ -97,7 +122,9 @@ const SavedIngredients = () => {
                     <p>
                       {ingridient.quantity} {ingridient.measure}
                     </p>
-                    <RxCross2 size={20} style={{ cursor: 'pointer' }} />
+                    <CrossIcon>
+                      <RxCross2 style={{ cursor: 'pointer' }} />
+                      </CrossIcon>
                   </Inner>
                 </IngridientItem>
               ))}

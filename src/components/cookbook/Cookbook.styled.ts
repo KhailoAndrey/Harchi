@@ -12,22 +12,36 @@ export const RecipeSection = styled.div`
 
 export const RecipesList = styled.ul`
   display: flex;
-  flex-wrap: wrap;
+  flex-direction:column;
   gap: 24px;
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+  flex-wrap: wrap;
+  }
 `;
 
 export const CategoryTitle = styled.p`
-  margin-bottom: 32px;
+  margin-bottom: 30px;
   font-family: 'KyivType Sans';
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 700;
   line-height: 130%;
   color: ${palette.mainBlack};
+  @media screen and (min-width: 768px) {
+    margin-bottom: 32px;
+    font-size: 32px;
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 36px;
+  }
 `;
 
 export const RedirectButtonWrapper = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  @media screen and (min-width: 768px) {
+    justify-content: flex-end;
+  }
 `;
 
 export const LoadMoreBtn = styled.div`
@@ -77,5 +91,11 @@ export const AddBtn = styled.button<ButtonStyledProps>`
 `;
 
 export const SavedIngredientsWrapper = styled.div`
-  margin-top: 80px;
-`;
+  margin-top: 24px;
+  @media screen and (min-width: 768px) {
+  margin-top: 50px;
+  }
+  @media screen and (min-width: 1440px) {
+      margin-top: 80px;
+  }
+  `;
