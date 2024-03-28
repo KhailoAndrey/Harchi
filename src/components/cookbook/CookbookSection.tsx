@@ -10,6 +10,7 @@ import {
   SectionWrapper,
   Select,
   SelectBlock,
+  SortingBlock,
 } from './CookbookSection.styled';
 import { IoIosArrowDown } from "react-icons/io";
 import { palette } from '@/constants/colors';
@@ -77,7 +78,9 @@ const CookbookSection = ({ children }: CookbookSectionProps) => {
               </SectionLink>
             </li>
           </SectionList>
-          {/* {section !== 'savedIngredients' && <Sorting list={EXPERT_RESIPES_SORTING}/>} */}
+          <SortingBlock>
+            {section !== 'savedIngredients' && <Sorting list={EXPERT_RESIPES_SORTING}/>}
+          </SortingBlock>
         </SectionWrapper>
       )}
       {children}

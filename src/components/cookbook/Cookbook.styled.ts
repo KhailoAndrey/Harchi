@@ -4,19 +4,29 @@ import styled from 'styled-components';
 export const RecipeSection = styled.div`
   &:first-child {
     margin-top: 24px;
+    @media screen and (min-width: 1440px) {
+      margin-top: 38px;
+    }
   }
   &:not(:first-child) {
-    margin-top: 80px;
+    margin-top: 24px;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 50px;
+    }
+    @media screen and (min-width: 1440px) {
+      margin-top: 80px;
+    }
   }
 `;
 
 export const RecipesList = styled.ul`
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   gap: 24px;
-    @media screen and (min-width: 768px) {
-      flex-direction: row;
-  flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 `;
 
@@ -52,21 +62,36 @@ export const LoadMoreBtn = styled.div`
 `;
 
 export const CookBookTextWrapper = styled.div`
-  max-width: 882px;
-  margin: 80px auto 110px;
+  max-width: 358px;
+  margin: 40px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 48px;
   font-family: 'El Messiri';
+  @media screen and (min-width: 768px) {
+    max-width: 648px;
+    margin: 50px auto 150px;
+  }
+  @media screen and (min-width: 1440px) {
+    max-width: 882px;
+    margin: 80px auto 110px;
+  }
 `;
 
 export const CookBookText = styled.p`
   text-align: center;
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 500;
   line-height: 130%;
   color: ${palette.mainBlack};
+  @media screen and (min-width: 768px) {
+    font-size: 22px;
+    font-weight: 700;
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 24px;
+  }
 `;
 
 interface ButtonStyledProps {
@@ -76,10 +101,10 @@ interface ButtonStyledProps {
 export const AddBtn = styled.button<ButtonStyledProps>`
   ${props => props.$backgroundcolor};
   height: 48px;
-  width: fit-content;
+  width: 358px;
   padding: 16px 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 8px;
   border-radius: 30px;
@@ -88,14 +113,21 @@ export const AddBtn = styled.button<ButtonStyledProps>`
   font-weight: 700;
   line-height: 100%;
   color: ${palette.mainWhite};
+  @media screen and (min-width: 768px) {
+  width: fit-content;
+  justify-content: space-between;
+  }
+  @media screen and (min-width: 1440px) {
+
+  }
 `;
 
 export const SavedIngredientsWrapper = styled.div`
   margin-top: 24px;
   @media screen and (min-width: 768px) {
-  margin-top: 50px;
+    margin-top: 50px;
   }
   @media screen and (min-width: 1440px) {
-      margin-top: 80px;
+    margin-top: 80px;
   }
-  `;
+`;

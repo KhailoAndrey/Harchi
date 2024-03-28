@@ -42,14 +42,22 @@ background-color: ${palette.beige};
 `;
 
 export const SectionWrapper = styled.div`
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
+      @media screen and (min-width: 768px) {
+  display: block;
+  }
+        @media screen and (min-width: 1440px) {
   display: flex;
-  align-items: center;
+    align-items: center;
   justify-content: space-between;
+  }
 `;
 
 export const SectionList = styled.ul`
   display: flex;
-    gap: 60px;
+  gap: 60px;
     @media screen and (min-width: 1440px) {
   gap: 24px;
   }
@@ -76,3 +84,12 @@ export const SectionLink = styled(NavLink)`
     color: ${palette.orange};
   }
 `;
+
+export const SortingBlock = styled.div`
+float: right;
+margin-top: 16px;
+margin-right: 22px;
+    @media screen and (min-width: 1440px) {
+  margin: 0;
+  }
+`

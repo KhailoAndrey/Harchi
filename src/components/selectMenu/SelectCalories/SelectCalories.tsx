@@ -29,9 +29,9 @@ const SelectCalories = () => {
           </Option>
         ))}
       </SelectItem>
-      <IconWrapper>
-        <IoIosArrowDown size={24}></IoIosArrowDown>
-      </IconWrapper>
+      {/* <IconWrapper>
+        <IoIosArrowDown size={18}></IoIosArrowDown>
+      </IconWrapper> */}
     </Block>
   );
 };

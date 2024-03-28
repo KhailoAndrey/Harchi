@@ -21,6 +21,8 @@ import { useEffect, useState } from 'react';
 import LoadMore from '../icons/LoadMoreIcon';
 import { ICard } from '@/types';
 import { IoIosAddCircleOutline } from 'react-icons/io';
+import Sorting from '../sorting/Sorting';
+import { EXPERT_RESIPES_SORTING } from '@/constants/expertsRecipesSorting';
 
 type CategorizedData = {
   [category: string]: ICard[];
@@ -29,15 +31,19 @@ type CategorizedData = {
 const Cookbook = () => {
   const { section } = useParams();
   const [categories, setCategories] = useState<string[]>([]);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  const categorizedData: CategorizedData = recipes.length > 0 ? recipes.reduce((acc, recipe) => {
-    const category = recipe.category;
-    if (!acc[category]) {
-      acc[category] = [];
-    }
-    acc[category].push(recipe);
-    return acc;
-  }, {} as CategorizedData) : {};
+  const categorizedData: CategorizedData =
+    recipes.length > 0
+      ? recipes.reduce((acc, recipe) => {
+          const category = recipe.category;
+          if (!acc[category]) {
+            acc[category] = [];
+          }
+          acc[category].push(recipe);
+          return acc;
+        }, {} as CategorizedData)
+      : {};
 
   useEffect(() => {
     setCategories(Object.keys(categorizedData));
@@ -49,6 +55,17 @@ const Cookbook = () => {
   const loadMoreCategories = () => {
     setVisibleCategoriesAmount(prevCount => prevCount + 2);
   };
+
+  const handleChangedSize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleChangedSize);
+    return () => {
+      window.removeEventListener('resize', handleChangedSize);
+    };
+  }, []);
 
   //   const dispatch = useDispatch();
   //   const [recipesList, setRecipesList] = useState([]);
@@ -82,7 +99,10 @@ const Cookbook = () => {
           {recipes.length !== 0 ? (
             visibleCategories.map(category => (
               <RecipeSection key={category}>
-                <CategoryTitle>{category}</CategoryTitle>
+                  <CategoryTitle>{category}</CategoryTitle>
+                  {/* {windowWidth < 768 && (
+                    <Sorting list={EXPERT_RESIPES_SORTING} />
+                  )} */}
                 <RecipesList>
                   <CardRecipes
                     key={category}
