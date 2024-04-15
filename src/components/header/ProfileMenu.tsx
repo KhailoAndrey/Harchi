@@ -5,6 +5,8 @@ import { SiCodechef } from 'react-icons/si';
 import styled from 'styled-components';
 import Modal from '../../helpers/modal/Modal';
 import Register from '../../components/register/Register';
+import { Link } from 'react-router-dom';
+import { palette } from '@/constants/colors';
 
 function ProfileMenu() {
   const [value, setValue] = useState<string>('');
@@ -61,6 +63,13 @@ const Wrapper = styled('div')`
   display: flex;
   gap: 12px;
   align-items: center;
+`;
+
+const ProfileLink = styled(Link)`
+color:${palette.mainBlack};
+&:hover{
+  color:${palette.red};
+}
 `;
 
 export default ProfileMenu;

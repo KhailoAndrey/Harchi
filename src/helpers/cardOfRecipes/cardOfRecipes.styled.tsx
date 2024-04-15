@@ -9,6 +9,19 @@ transition: 1s;
     transform: scale(1.05);
   }
 `;
+
+export const ImgWrapper = styled.div`
+position:relative;
+`
+
+export const IconsBox = styled.div`
+position:absolute;
+top: 8px;
+right: 8px;
+display:flex;
+gap:4px;
+`
+
 export const Link = styled.a`
 cursor: pointer;
 color: #111110;

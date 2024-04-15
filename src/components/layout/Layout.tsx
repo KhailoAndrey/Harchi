@@ -12,8 +12,8 @@ function Layout() {
         <Header />
         <Outlet />
         <Footer />
+        <ToTopButton />
       </Suspense>
-      <ToTopButton />
     </>
   );
 }

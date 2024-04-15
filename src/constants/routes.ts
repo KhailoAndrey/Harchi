@@ -1,6 +1,6 @@
 export const ROUTES = {
   RECEIPTS: '/all_recipes',
   ADD_RECEIPT: '/new/receipt',
-  BOOK: '/book',
+  BOOK: '/cookbook',
   EXPERTS: '/experts'
 };
